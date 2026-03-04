@@ -1,0 +1,6 @@
+"UnlitGeneric"
+{
+	"$baseTexture" "backpack/backpack/workshop/weapons/c_models/c_rough_rider/c_rough_rider"
+	"$translucent" 1
+	"$vertexcolor" 1
+}

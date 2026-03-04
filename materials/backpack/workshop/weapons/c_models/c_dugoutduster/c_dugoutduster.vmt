@@ -1,0 +1,6 @@
+"UnlitGeneric"
+{
+	"$basetexture"		"backpack/workshop/weapons/c_models/c_dugoutduster/c_dugoutduster"
+	"$translucent"		"1"
+	"$vertexcolor"		"1"
+}
