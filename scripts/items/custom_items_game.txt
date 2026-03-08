@@ -133,6 +133,7 @@ Less accurate, slower firing rate"
 			"mouse_pressed_sound" 		"ui/item_heavy_gun_pickup.wav"
 			"drop_sound" 				"ui/item_heavy_gun_drop.wav"
 		}
+
 		"1003" //QUAD-OFF
 		{
 			"name"						"QUAD-OFF"
@@ -467,9 +468,10 @@ Halved bullets per shot"
 			"mouse_pressed_sound"		"ui/item_medium_gun_pickup.wav"
 			"drop_sound"				"ui/item_heavy_gun_drop.wav"
 		}
+
 		"1007" //DOME BREAKER
 		{
-			"name"						"HORNET'S NEST"
+			"name"						"DOME BREAKER"
 			"item_class"				"tf_weapon_rocketlauncher"
 			"item_slot"					"primary"
 
@@ -556,7 +558,8 @@ Smaller clip size"
 			"item_description"			"Hold fire to load up to 7 rockets that fire all at once
 Increased primary ammo and faster reload time
 
-Slower movement speed, deals way less damage up close"
+Slower movement speed, deals way less damage up close
+Reduced explosion radius"
 			"item_logname"				""
 			"item_iconname"				""
 
@@ -574,6 +577,16 @@ Slower movement speed, deals way less damage up close"
 			"attributes"
 			{
 				"hidden separator"		"1"
+				"Blast radius decreased"
+				{
+					"attribute_class"	"mult_explosion_radius"
+					"value"	"0.75"
+				}
+				"punch angle mod add hidden"
+				{
+					"attribute_class"	"punch_angle_mod"
+					"value" 			"5"
+				}
 				"rocket gravity"
 				{
 					"attribute_class"	"mod_rocket_gravity"
@@ -597,7 +610,7 @@ Slower movement speed, deals way less damage up close"
 				"Reload time decreased"
 				{
 					"attribute_class"	"mult_reload_time"
-					"value"				"0.6"
+					"value"				"0.8"
 				}
 				"clip size bonus"
 				{
@@ -607,7 +620,7 @@ Slower movement speed, deals way less damage up close"
 				"projectile spread angle penalty"
 				{
 					"attribute_class" 	"projectile_spread_angle"
-					"value" 			"8"
+					"value" 			"12"
 				}
 				"move speed penalty"
 				{
@@ -622,12 +635,17 @@ Slower movement speed, deals way less damage up close"
 				"apply self knockback"
 				{
 					"attribute_class"	"apply_self_knockback"
-					"value" 			"50"
+					"value" 			"75"
+				}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"				"0.9"
 				}
 				"custom rampup"
 				{
 					"attribute_class"	"mod_custom_rampup"
-					"value" 			"0.25"
+					"value" 			"0.05"
 				}
 			}
 			"visuals"
@@ -723,7 +741,8 @@ Deals less damage, slower movement speed"
 While rocket jumping, increases fire rate, deals minicrits
 Slightly faster projectile speed
 
-Deals less damage, crits become minicrits"
+Deals less damage, crits become minicrits
+Reduced explosion radius"
 			"item_logname"				""
 			"item_iconname"				""
 
@@ -741,6 +760,11 @@ Deals less damage, crits become minicrits"
 			"attributes"
 			{
 				"hidden separator"		"1"
+				"Blast radius decreased"
+				{
+					"attribute_class"	"mult_explosion_radius"
+					"value"	"0.5"
+				}
 				"rocket jump damage reduction"	
 				{
 					"attribute_class"	"rocket_jump_dmg_reduction"
@@ -786,7 +810,148 @@ Deals less damage, crits become minicrits"
 			"mouse_pressed_sound"		"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"				"ui/item_heavy_gun_drop.wav"
 		}
-		"1011" //VELES
+
+		"1011" //MOLOTOV LAUNCHER
+		{
+			"name"						"MOLOTOV LAUNCHER"
+			"item_class"				"tf_weapon_grenadelauncher"
+			"item_slot"					"primary"
+
+			"propername"				"1"
+			"item_name"					"Molotov Launcher"
+			"item_type_name"			"#TF_Weapon_FlameThrower"
+			"item_description"			"Fires molotovs with increased splash radius
+Burn time stacks with successive hits up to 20 seconds
+
+Projectiles are inaccurate, slower projectile speed
+Halved initial burn time
+No airblast"
+			"item_logname"				""
+			"item_iconname"				""
+
+			"image_inventory"			"backpack/weapons/w_models/w_molotovlauncher"
+			"model_world"				"models/weapons/w_models/w_molotovlauncher.mdl"
+			"model_player"				"models/weapons/v_models/v_molotovlauncher_pyro.mdl"
+			"attach_to_hands"			"2"
+			"used_by_classes"
+			{
+				"pyro" 	"primary"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"	"10 0 -10"
+				"reload time increased hidden"			"1"
+				"hidden primary max ammo bonus"			"3.1"
+				"fire rate penalty hidden"				"0.8"
+				"damage bonus hidden"					"0.25"
+				"custom rampup"							"1.2"
+			}
+			"attributes"
+			{
+				"hidden separator"		"1"
+				"provide on active"
+				{
+					"attribute_class"	"provide_on_active"
+					"value" "1"
+				}
+				"projectile spread angle penalty"
+				{
+					"attribute_class" 	"projectile_spread_angle"
+					"value" 			"3"
+				}
+				"mod max primary clip override"
+				{
+					"attribute_class"	"mod_max_primary_clip_override"
+					"value"				"-1"
+				}
+				"Set DamageType Ignite"
+				{
+					"attribute_class"	"set_dmgtype_ignite"
+					"value" 			"1"
+				}
+				"weapon burn dmg increased additive"
+				{
+					"attribute_class"	"mult_wpn_burndmg"
+					"value"				"1"
+				}
+//				"blast splash damage decreased"
+//				{
+//					"attribute_class"	"mult_explosion_splash_damage"
+//					"value"				"1.25"
+//				}
+				"Blast radius increased"
+				{
+					"attribute_class"		"mult_explosion_radius"
+					"value"					"1.15" 
+				}
+				"weapon burn time reduced additive"
+				{
+					"attribute_class"	"mult_wpn_burntime"
+					"value"				"2.5"
+				}
+				"Projectile speed decreased"
+				{
+					"attribute_class"	"mult_projectile_speed"
+					"value"				"0.8"
+				}
+				"custom projectile model"
+				{
+					"attribute_class"	"custom_projectile_model"
+					"value"				"models/weapons/w_models/w_molotov_projectile.mdl"
+				}
+				"blast dmg to self increased"	
+				{
+					"attribute_class"	"blast_dmg_to_self"
+					"value" 			"0.05"
+				}
+//				"clip size penalty hidden"	
+//				{
+//					"attribute_class"	"mult_clipsize"
+//					"value" 			"1.5"
+//				}
+				"damage force increase hidden"
+				{
+					"attribute_class"	"mult_dmgself_push_force"
+					"value" 			"0"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_CowMangler.Single"
+				"sound_burst"			"Weapon_CowMangler.SingleCharged"
+				"sound_special1"		"Weapon_CowMangler.Explode"
+				"animation_replacement"
+				{
+					"ACT_MP_ATTACK_STAND_PRIMARY"				"ACT_MP_ATTACK_STAND_SECONDARYFIRE"
+					"ACT_MP_ATTACK_CROUCH_PRIMARY"				"ACT_MP_ATTACK_CROUCH_SECONDARYFIRE"
+					"ACT_MP_ATTACK_SWIM_PRIMARY"				"ACT_MP_ATTACK_SWIM_SECONDARYFIRE"
+
+					"ACT_MP_RELOAD_STAND_PRIMARY"				"ACT_MP_ATTACK_STAND_SECONDARYFIRE"
+					"ACT_MP_RELOAD_CROUCH_PRIMARY"				"ACT_MP_ATTACK_CROUCH_SECONDARYFIRE"
+					"ACT_MP_RELOAD_SWIM_PRIMARY"				"ACT_MP_ATTACK_SWIM_SECONDARYFIRE"
+				}
+			}
+			"mouse_pressed_sound"		"ui/item_flamethrower_pickup.wav"
+			"drop_sound"				"ui/item_heavier_gun_drop.wav"
+		}
+//		"1012" //MUTINY INCINERATOR
+//		{
+
+//		}
+//		"1013" //SPRAY N' PRAY
+//		{
+
+//		}
+//		"1014" //SOLAR FLARE
+//		{
+
+//		}
+//		"1015" //CREMATOR'S CATCH
+//		{
+
+//		}
+
+		"1016" //VELES
 		{
 			"name"						"VELEZ"
 			"item_class"				"tf_weapon_minigun"
@@ -860,7 +1025,7 @@ Bullets penetrate 2 enemies and destroy projectiles
 			"mouse_pressed_sound"		"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"				"ui/item_heavy_gun_drop.wav"
 		}
-		"1012" //BULLETPROOF BATTERY
+		"1017" //BULLETPROOF BATTERY
 		{
 			"name"						"BULLETPROOF BATTERY"
 			"item_class"				"tf_weapon_minigun"
@@ -874,7 +1039,7 @@ While revving up below 50% health, all damage is halved
 Extremely high knockback resistance while revved
 
 Much longer spin up time, dramatically slow while revved
-Spread increases health decreases"
+Spread increases as health decreases"
 			"item_logname"				""
 			"item_iconname"				""
 
@@ -936,7 +1101,7 @@ Spread increases health decreases"
 			"mouse_pressed_sound"		"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"				"ui/item_heavy_gun_drop.wav"
 		}
-		"1013" //PERFORATOR
+		"1018" //PERFORATOR
 		{
 			"name"						"PERFORATOR"
 			"item_class"				"tf_weapon_minigun"
@@ -1014,7 +1179,7 @@ Ammo drains much faster"
 			"mouse_pressed_sound"		"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"				"ui/item_heavy_gun_drop.wav"
 		}
-		"1014" //VLADISLAVA
+		"1019" //VLADISLAVA
 		{
 			"name"						"VLADISLAVA"
 			"item_class"				"tf_weapon_minigun"
@@ -1023,9 +1188,11 @@ Ammo drains much faster"
 			"propername"				"1"
 			"item_name"					"Vladislava"
 			"item_type_name"			"#TF_Weapon_Minigun"
-			"item_description"			"Creates ring of flames, move faster while revved, more accurate, mini-crits targets on fire
+			"item_description"			"Creates ring of flames, move faster while revved
+More accurate, mini-crits targets on fire
 
-Consumes 6 ammo per second revved, increased push force taken, bullets per shot is halved"
+Increased push force taken, bullets per shot is halved
+Consumes 6 ammo per second revved"
 			"item_logname"				""
 			"item_iconname"				""
 
@@ -1105,6 +1272,76 @@ Consumes 6 ammo per second revved, increased push force taken, bullets per shot 
 			"mouse_pressed_sound" 		"ui/item_heavy_gun_pickup.wav"
 			"drop_sound" 				"ui/item_heavy_gun_drop.wav"
 		}
+
+		"2004" //FISHWHACKER
+		{
+			"name"				"Fishwhacker"
+			"item_name"			"#TF_Weapon_Fishwhacker"
+			"item_type_name"	"#TF_Weapon_Club"
+			"item_description"	"#TF_Weapon_Fishwhacker_Desc"
+			"item_quality"		"normal"
+			"propername"		"1"
+
+			"item_class"	"tf_weapon_kukri"
+			"item_slot"		"melee"
+			"used_by_classes"
+			{
+				"Sniper"		"1"
+			}
+			"attributes"
+			{
+				"bleeding duration"
+				{
+					"attribute_class"	"bleeding_duration"
+					"value"				"2"
+				}
+				"crit vs bleeding players"
+				{
+					"attribute_class"	"crit_vs_bleeding_players"
+					"value"				"1"
+				}
+				"hit self on miss"
+				{
+					"attribute_class"	"hit_self_on_miss"
+					"value"				"1"
+				}
+				"add condition on miss"
+				{
+					"attribute_class"	"onmiss_addcond"
+					"value"				"30 2"
+				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"				"1"
+				}
+				"hidden separator"		"1"
+				"particle on melee hit"
+				{
+					"attribute_class"	"particle_on_melee_hit"
+					"value"				"impact_wood"
+				}
+			}
+
+			"model_world"		"models/weapons/w_models/w_fishwhacker.mdl"
+			"model_player"		"models/weapons/v_models/v_fishwhacker_sniper.mdl"
+			"attach_to_hands"	"2"
+			"static_attrs"
+			{
+				"min_viewmodel_offset"	"10 0 -6"
+			}
+			"visuals"
+			{
+				"sound_melee_hit"		"Weapon_Fishwhacker.HitFlesh"
+				"sound_melee_hit_world"	"Weapon_Fishwhacker.HitWorld"
+			}
+			"item_logname"	"fishwhacker"
+			"item_iconname"	"fishwhacker"
+
+			"image_inventory"		"backpack/weapons/w_models/w_fishwhacker"
+			"mouse_pressed_sound"	"ui/item_wood_pole_pickup.wav"
+			"drop_sound"			"ui/item_wood_weapon_drop.wav"
+		}
 	}
 	"attributes"
 	{
@@ -1116,6 +1353,26 @@ Consumes 6 ammo per second revved, increased push force taken, bullets per shot 
 			"description_format"	"value_is_additive"
 			"hidden"	"0"
 			"effect_type"	"positive"
+			"stored_as_integer"	"0"
+		}
+		"7001"
+		{
+			"name"	"weapon burn dmg increased additive"
+			"attribute_class"	"mult_wpn_burndmg"
+			"description_string"	"#Attrib_WpnBurnDmg_Increased"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"positive"
+			"stored_as_integer"	"0"
+		}
+		"7002"
+		{
+			"name"	"weapon burn time reduced additive"
+			"attribute_class"	"mult_wpn_burntime"
+			"description_string"	"#Attrib_WpnBurnTime_Reduced"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"negative"
 			"stored_as_integer"	"0"
 		}
 	}
