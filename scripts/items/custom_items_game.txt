@@ -66,7 +66,7 @@ Longer deploy time, longer reload time"
 				"Reload time increased"
 				{
 					"attribute_class"	"mult_reload_time"
-					"value"				"1.75"
+					"value"				"1.5"
 				}
 			}
 			"visuals"
@@ -580,7 +580,7 @@ Reduced explosion radius"
 				"Blast radius decreased"
 				{
 					"attribute_class"	"mult_explosion_radius"
-					"value"	"0.75"
+					"value"	"0.65"
 				}
 				"punch angle mod add hidden"
 				{
@@ -590,7 +590,7 @@ Reduced explosion radius"
 				"rocket gravity"
 				{
 					"attribute_class"	"mod_rocket_gravity"
-					"value" 			"2.25"
+					"value" 			"2"
 				}
 				"maxammo primary increased"
 				{
@@ -640,7 +640,7 @@ Reduced explosion radius"
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"				"0.9"
+					"value"				"1.15"
 				}
 				"custom rampup"
 				{
@@ -822,6 +822,7 @@ Reduced explosion radius"
 			"item_type_name"			"#TF_Weapon_FlameThrower"
 			"item_description"			"Fires molotovs with increased splash radius
 Burn time stacks with successive hits up to 20 seconds
+The closer you are, the more burn damage you deal
 
 Projectiles are inaccurate, slower projectile speed
 Halved initial burn time
@@ -843,7 +844,7 @@ No airblast"
 				"reload time increased hidden"			"1"
 				"hidden primary max ammo bonus"			"3.1"
 				"fire rate penalty hidden"				"0.8"
-				"damage bonus hidden"					"0.25"
+				"damage bonus hidden"					"0.18"
 				"custom rampup"							"1.2"
 			}
 			"attributes"
@@ -872,7 +873,7 @@ No airblast"
 				"weapon burn dmg increased additive"
 				{
 					"attribute_class"	"mult_wpn_burndmg"
-					"value"				"1"
+					"value"				"4"
 				}
 //				"blast splash damage decreased"
 //				{
@@ -961,6 +962,16 @@ Increased airblast cost, airblast destroys projectiles"
 			"static_attrs"
 			{
 				"min_viewmodel_offset"	"10 0 -10"
+
+				"flame_gravity"					"0"
+				"flame_drag"					"8.500000"
+				"flame_up_speed"				"50"
+				"flame_speed"					"2450"
+				"flame_spread_degree"			"2.800000"
+				"flame_lifetime"				"0.600000"
+				"flame_random_life_time_offset"	"0.100000"
+				"flame_velocity_fade_start"		"0.300000"
+				"flame_velocity_fade_end"		"0.500000"
 			}
 			"attributes"
 			{
