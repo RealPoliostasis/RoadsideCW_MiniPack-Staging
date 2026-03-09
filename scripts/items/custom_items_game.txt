@@ -934,10 +934,76 @@ No airblast"
 			"mouse_pressed_sound"		"ui/item_flamethrower_pickup.wav"
 			"drop_sound"				"ui/item_heavier_gun_drop.wav"
 		}
-//		"1012" //MUTINY INCINERATOR
-//		{
+		"1012" //MUTINY INCINERATOR
+		{
+			"name"						"MUTINY INCINERATOR"
+			"item_class"				"tf_weapon_flamethrower"
+			"item_slot"					"primary"
 
-//		}
+			"propername"				"1"
+			"item_name"					"Mutiny Incinerator"
+			"item_type_name"			"#TF_Weapon_FlameThrower"
+			"item_description"			"Minicrits enemies from behind
+Increased damage and burn damage
+
+Almost no weapon burn time, crits become minicrits
+Increased airblast cost, airblast destroys projectiles"
+			"item_logname"				""
+			"item_iconname"				""
+
+			"image_inventory"			"backpack/weapons/c_models/c_mutinyincinerator"
+			"model_player"				"models/weapons/c_models/c_mutinyincinerator/c_mutinyincinerator.mdl"
+			"attach_to_hands"			"1"
+			"used_by_classes"
+			{
+				"pyro" 	"primary"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"	"10 0 -10"
+			}
+			"attributes"
+			{
+				"hidden separator"		"1"
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"				"1.2"
+				}
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"				"1.2"
+				}
+				"weapon burn dmg increased"
+				{
+					"attribute_class"	"mult_wpn_burndmg"
+					"value"				"2"
+				}
+				"airblast cost increased"
+				{
+					"attribute_class"	"mult_airblast_cost"
+					"value"				"1.5"
+				}
+				"hidden separator"		"1"
+				"airblast_destroy_projectile"
+				{
+					"attribute_class"	"airblast_destroy_projectile"
+					"value"				"1"
+				}
+			}
+			"visuals"
+			{
+				"animation_replacement"
+				{
+					"ACT_MP_ATTACK_CROUCH_SECONDARYFIRE"	"ACT_MP_ATTACK_CROUCH_PRIMARY_ALT"
+					"ACT_MP_ATTACK_STAND_SECONDARYFIRE"		"ACT_MP_ATTACK_STAND_PRIMARY_ALT"
+					"ACT_MP_ATTACK_SWIM_SECONDARYFIRE"		"ACT_MP_ATTACK_SWIM_PRIMARY_ALT"
+				}
+			}
+			"mouse_pressed_sound"		"ui/item_flamethrower_pickup.wav"
+			"drop_sound"				"ui/item_heavy_gun_drop.wav"
+		}
 //		"1013" //SPRAY N' PRAY
 //		{
 
@@ -1282,8 +1348,8 @@ Consumes 6 ammo per second revved"
 			"item_quality"		"normal"
 			"propername"		"1"
 
-			"item_class"	"tf_weapon_kukri"
-			"item_slot"		"melee"
+			"item_class"		"tf_weapon_club"
+			"item_slot"			"melee"
 			"used_by_classes"
 			{
 				"Sniper"		"1"
@@ -1322,7 +1388,6 @@ Consumes 6 ammo per second revved"
 					"value"				"impact_wood"
 				}
 			}
-
 			"model_world"		"models/weapons/w_models/w_fishwhacker.mdl"
 			"model_player"		"models/weapons/v_models/v_fishwhacker_sniper.mdl"
 			"attach_to_hands"	"2"
