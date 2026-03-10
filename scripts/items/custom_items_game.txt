@@ -16,6 +16,9 @@
 //
 	"items"
 	{
+		/////////////////////////////////
+		// Base Game, Multi-Class, Etc //
+		/////////////////////////////////
 		"1001" //DUG-OUT DUSTER
 		{
 			"name"						"DUG-OUT DUSTER"
@@ -43,7 +46,7 @@ Longer deploy time, longer reload time"
 			}
 			"static_attrs"
 			{
-				"min_viewmodel_offset"	"10 0 -10"
+				"min_viewmodel_offset"	"10 0 -9"
 			}
 			"attributes"
 			{
@@ -133,7 +136,77 @@ Less accurate, slower firing rate"
 			"mouse_pressed_sound" 		"ui/item_heavy_gun_pickup.wav"
 			"drop_sound" 				"ui/item_heavy_gun_drop.wav"
 		}
+		"2004" //FISHWHACKER
+		{
+			"name"				"Fishwhacker"
+			"item_name"			"#TF_Weapon_Fishwhacker"
+			"item_type_name"	"#TF_Weapon_Club"
+			"item_description"	"#TF_Weapon_Fishwhacker_Desc"
+			"item_quality"		"normal"
+			"propername"		"1"
 
+			"item_class"		"tf_weapon_club"
+			"item_slot"			"melee"
+			"used_by_classes"
+			{
+				"Sniper"		"1"
+			}
+			"attributes"
+			{
+				"bleeding duration"
+				{
+					"attribute_class"	"bleeding_duration"
+					"value"				"2"
+				}
+				"crit vs bleeding players"
+				{
+					"attribute_class"	"crit_vs_bleeding_players"
+					"value"				"1"
+				}
+				"hit self on miss"
+				{
+					"attribute_class"	"hit_self_on_miss"
+					"value"				"1"
+				}
+				"add condition on miss"
+				{
+					"attribute_class"	"onmiss_addcond"
+					"value"				"30 2"
+				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"				"1"
+				}
+				"hidden separator"		"1"
+				"particle on melee hit"
+				{
+					"attribute_class"	"particle_on_melee_hit"
+					"value"				"impact_wood"
+				}
+			}
+			"model_world"		"models/weapons/w_models/w_fishwhacker.mdl"
+			"model_player"		"models/weapons/v_models/v_fishwhacker_sniper.mdl"
+			"attach_to_hands"	"2"
+			"static_attrs"
+			{
+				"min_viewmodel_offset"	"10 0 -6"
+			}
+			"visuals"
+			{
+				"sound_melee_hit"		"Weapon_Fishwhacker.HitFlesh"
+				"sound_melee_hit_world"	"Weapon_Fishwhacker.HitWorld"
+			}
+			"item_logname"	"fishwhacker"
+			"item_iconname"	"fishwhacker"
+
+			"image_inventory"		"backpack/weapons/w_models/w_fishwhacker"
+			"mouse_pressed_sound"	"ui/item_wood_pole_pickup.wav"
+			"drop_sound"			"ui/item_wood_weapon_drop.wav"
+		}
+		///////////
+		// SCOUT //
+		///////////
 		"1003" //QUAD-OFF
 		{
 			"name"						"QUAD-OFF"
@@ -468,7 +541,9 @@ Halved bullets per shot"
 			"mouse_pressed_sound"		"ui/item_medium_gun_pickup.wav"
 			"drop_sound"				"ui/item_heavy_gun_drop.wav"
 		}
-
+		/////////////
+		// SOLDIER //
+		/////////////
 		"1007" //DOME BREAKER
 		{
 			"name"						"DOME BREAKER"
@@ -810,7 +885,9 @@ Reduced explosion radius"
 			"mouse_pressed_sound"		"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"				"ui/item_heavy_gun_drop.wav"
 		}
-
+		//////////
+		// PYRO //
+		//////////
 		"1011" //MOLOTOV LAUNCHER
 		{
 			"name"						"MOLOTOV LAUNCHER"
@@ -844,7 +921,7 @@ No airblast"
 				"reload time increased hidden"			"1"
 				"hidden primary max ammo bonus"			"3.1"
 				"fire rate penalty hidden"				"0.8"
-				"damage bonus hidden"					"0.18"
+				"damage bonus hidden"					"0.22"
 				"custom rampup"							"1.2"
 			}
 			"attributes"
@@ -893,7 +970,7 @@ No airblast"
 				"Projectile speed decreased"
 				{
 					"attribute_class"	"mult_projectile_speed"
-					"value"				"0.8"
+					"value"				"0.9"
 				}
 				"custom projectile model"
 				{
@@ -923,13 +1000,13 @@ No airblast"
 				"sound_special1"		"Weapon_CowMangler.Explode"
 				"animation_replacement"
 				{
-					"ACT_MP_ATTACK_STAND_PRIMARY"				"ACT_MP_ATTACK_STAND_SECONDARYFIRE"
-					"ACT_MP_ATTACK_CROUCH_PRIMARY"				"ACT_MP_ATTACK_CROUCH_SECONDARYFIRE"
-					"ACT_MP_ATTACK_SWIM_PRIMARY"				"ACT_MP_ATTACK_SWIM_SECONDARYFIRE"
+					"ACT_MP_ATTACK_CROUCH_PRIMARY"		"ACT_MP_ATTACK_CROUCH_PRIMARY_ALT"
+					"ACT_MP_ATTACK_STAND_PRIMARY"		"ACT_MP_ATTACK_STAND_PRIMARY_ALT"
+					"ACT_MP_ATTACK_SWIM_PRIMARY"		"ACT_MP_ATTACK_SWIM_PRIMARY_ALT"
 
-					"ACT_MP_RELOAD_STAND_PRIMARY"				"ACT_MP_ATTACK_STAND_SECONDARYFIRE"
-					"ACT_MP_RELOAD_CROUCH_PRIMARY"				"ACT_MP_ATTACK_CROUCH_SECONDARYFIRE"
-					"ACT_MP_RELOAD_SWIM_PRIMARY"				"ACT_MP_ATTACK_SWIM_SECONDARYFIRE"
+					"ACT_MP_ATTACK_CROUCH_SECONDARYFIRE"	"ACT_MP_ATTACK_CROUCH_PRIMARY_ALT"
+					"ACT_MP_ATTACK_STAND_SECONDARYFIRE"		"ACT_MP_ATTACK_STAND_PRIMARY_ALT"
+					"ACT_MP_ATTACK_SWIM_SECONDARYFIRE"		"ACT_MP_ATTACK_SWIM_PRIMARY_ALT"
 				}
 			}
 			"mouse_pressed_sound"		"ui/item_flamethrower_pickup.wav"
@@ -964,43 +1041,146 @@ Increased airblast cost, airblast destroys projectiles"
 				"min_viewmodel_offset"	"10 0 -10"
 
 				"flame_gravity"					"0"
-				"flame_drag"					"8.500000"
+				"flame_drag"					"8.5"
 				"flame_up_speed"				"50"
 				"flame_speed"					"2450"
-				"flame_spread_degree"			"2.800000"
-				"flame_lifetime"				"0.600000"
-				"flame_random_life_time_offset"	"0.100000"
-				"flame_velocity_fade_start"		"0.300000"
-				"flame_velocity_fade_end"		"0.500000"
+				"flame_spread_degree"			"2.8"
+				"flame_lifetime"				"0.6"
+				"flame_random_life_time_offset"	"0.1"
+				"flame_velocity_fade_start"		"0.3"
+				"flame_velocity_fade_end"		"0.5"
 			}
 			"attributes"
 			{
 				"hidden separator"		"1"
-				"damage bonus"
+				"crit from behind"
 				{
-					"attribute_class"	"mult_dmg"
-					"value"				"1.2"
+					"attribute_class"	"crit_from_behind"
+					"value"				"1"
 				}
 				"damage bonus"
 				{
 					"attribute_class"	"mult_dmg"
 					"value"				"1.2"
+				}
+				"weapon burn time reduced additive"
+				{
+					"attribute_class"	"mult_wpn_burntime"
+					"value"				"-10"
 				}
 				"weapon burn dmg increased"
 				{
 					"attribute_class"	"mult_wpn_burndmg"
-					"value"				"2"
+					"value"				"1"
 				}
 				"airblast cost increased"
 				{
 					"attribute_class"	"mult_airblast_cost"
 					"value"				"1.5"
 				}
+				"crits_become_minicrits"
+				{
+					"attribute_class"	"crits_become_minicrits"
+					"value"				"1"
+				}
 				"hidden separator"		"1"
 				"airblast_destroy_projectile"
 				{
 					"attribute_class"	"airblast_destroy_projectile"
 					"value"				"1"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"	"Weapon_BackBurner.FireStart"
+				"sound_special1"	"Weapon_BackBurner.FireLoop"
+				"sound_burst"		"Weapon_BackBurner.FireLoopCrit"
+				"animation_replacement"
+				{
+					"ACT_MP_ATTACK_CROUCH_SECONDARYFIRE"	"ACT_MP_ATTACK_CROUCH_PRIMARY_ALT"
+					"ACT_MP_ATTACK_STAND_SECONDARYFIRE"		"ACT_MP_ATTACK_STAND_PRIMARY_ALT"
+					"ACT_MP_ATTACK_SWIM_SECONDARYFIRE"		"ACT_MP_ATTACK_SWIM_PRIMARY_ALT"
+				}
+			}
+			"mouse_pressed_sound"		"ui/item_flamethrower_pickup.wav"
+			"drop_sound"				"ui/item_heavy_gun_drop.wav"
+		}
+		"1013" //MAKESHIFT MUTILATOR
+		{
+			"name"						"MAKESHIFT MUTILATOR"
+			"item_class"				"tf_weapon_flamethrower"
+			"item_slot"					"primary"
+
+			"propername"				"1"
+			"item_name"					"Makeshift Mutilator"
+			"item_type_name"			"#TF_Weapon_FlameThrower"
+			"item_description"			"Applies tranq effect to enemies on hit with flames
+Enemies with this effect can be crit'ed by any melee
+Much faster weapon switch speed
+
+Flames deal near no damage and zero afterburn damage"
+			"item_logname"				""
+			"item_iconname"				""
+
+			"image_inventory"			"backpack/weapons/w_models/w_chemthrower"
+			"model_world"				"models/weapons/w_models/w_chemthrower.mdl"
+			"model_player"				"models/weapons/v_models/v_chemthrower_pyro.mdl"
+			"attach_to_hands"			"2"
+			"used_by_classes"
+			{
+				"pyro" 	"primary"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"	"10 0 -10"
+
+				"flame_gravity"					"0"
+				"flame_drag"					"8.5"
+				"flame_up_speed"				"50"
+				"flame_speed"					"2450"
+				"flame_spread_degree"			"2.8"
+				"flame_lifetime"				"0.6"
+				"flame_random_life_time_offset"	"0.1"
+				"flame_velocity_fade_start"		"0.3"
+				"flame_velocity_fade_end"		"0.5"
+			}
+			"attributes"
+			{
+				"hidden separator"		"1"
+				"provide on active"
+				{
+					"attribute_class"	"provide_on_active"
+					"value" "1"
+				}
+				"single wep holster time increased"
+				{
+					"attribute_class"	"mult_switch_from_wep_deploy_time"
+					"value" "0.5"
+				}
+				"single wep deploy time increased"
+				{
+					"attribute_class"	"mult_single_wep_deploy_time"
+					"value" "0.5"
+				}
+				"add condition on hit"																
+				{
+					"attribute_class"	"add_onhit_addcond"
+					"value" 			"136 10"
+				}
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"				"3"
+				}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"				"0.001"
+				}
+				"weapon burn dmg reduced"
+				{
+					"attribute_class"	"mult_wpn_burndmg"
+					"value" 			"0.01"
 				}
 			}
 			"visuals"
@@ -1015,20 +1195,180 @@ Increased airblast cost, airblast destroys projectiles"
 			"mouse_pressed_sound"		"ui/item_flamethrower_pickup.wav"
 			"drop_sound"				"ui/item_heavy_gun_drop.wav"
 		}
-//		"1013" //SPRAY N' PRAY
+		"1014" //SOLAR FLARE
+		{
+			"name"						"SOLAR FLARE"
+			"item_class"				"tf_weapon_rocketlauncher_fireball"
+			"item_slot"					"primary"
+
+			"propername"				"1"
+			"item_name"					"Solar Flare"
+			"item_type_name"			"#TF_Weapon_FlameThrower"
+			"item_description"			"Fires short ranged fireballs that penetrate enemies
+Gain 7 health on hit and mini-crits airborne targets
+Deals triple damage against burning targets
+
+Far shorter afterburn time and deals less damage"
+			"item_logname"				""
+			"item_iconname"				""
+
+			"image_inventory"			"backpack/weapons/c_models/c_solar_carbonizer/c_solar_carbonizer"
+			"model_player"				"models/weapons/c_models/c_solar_carbonizer/c_solar_carbonizer.mdl"
+			"attach_to_hands"			"1"
+			"used_by_classes"
+			{
+				"pyro" 	"primary"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"	"10 0 -10"
+				"item_meter_charge_type"				"1"
+				"item_meter_charge_rate"				"0.8"
+				"meter_label"							"#TF_Pressure"
+				"hidden primary max ammo bonus"			"0.2"
+				"airblast cost scale hidden"			"0.25"
+			}
+			"attributes"
+			{
+				"hidden separator"		"1"
+				"mod mini-crit airborne"
+				{
+					"attribute_class"	"mini_crit_airborne"
+					"value" 			"1"
+				}
+				"heal on hit for slowfire"
+				{
+					"attribute_class"	"add_onhit_addhealth"
+					"value"				"7"
+				}
+				"weapon burn time reduced"
+				{
+					"attribute_class"	"mult_wpn_burntime"
+					"value"				"0.5"
+				}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"0.75"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_CowMangler.Single"
+				"sound_burst"			"Weapon_CowMangler.SingleCharged"
+				"sound_special1"		"Weapon_CowMangler.Explode"
+				"animation_replacement"
+				{
+					"ACT_VM_PRIMARYATTACK"		"ACT_PRIMARY_VM_PRIMARYATTACK_3"
+
+					"ACT_MP_ATTACK_CROUCH_PRIMARY"		"ACT_MP_ATTACK_CROUCH_PRIMARY_ALT"
+					"ACT_MP_ATTACK_STAND_PRIMARY"		"ACT_MP_ATTACK_STAND_PRIMARY_ALT"
+					"ACT_MP_ATTACK_SWIM_PRIMARY"		"ACT_MP_ATTACK_SWIM_PRIMARY_ALT"
+
+					"ACT_MP_ATTACK_CROUCH_SECONDARYFIRE"	"ACT_MP_ATTACK_CROUCH_PRIMARY_ALT"
+					"ACT_MP_ATTACK_STAND_SECONDARYFIRE"		"ACT_MP_ATTACK_STAND_PRIMARY_ALT"
+					"ACT_MP_ATTACK_SWIM_SECONDARYFIRE"		"ACT_MP_ATTACK_SWIM_PRIMARY_ALT"
+				}
+			}
+			"mouse_pressed_sound"		"ui/item_flamethrower_pickup.wav"
+			"drop_sound"				"ui/item_heavy_gun_drop.wav"
+		}
+		"1015" //CREMATOR'S CATCH
+		{
+			"name"						"CREMATOR'S CATCH"
+			"item_class"				"tf_weapon_flamethrower"
+			"item_slot"					"primary"
+
+			"propername"				"1"
+			"item_name"					"Cremator's Catch"
+			"item_type_name"			"#TF_Weapon_FlameThrower"
+			"item_description"			"Airblasting teammates give both of you a speed boost
+Killing an enemy gives you haste for 3 seconds
+
+Deals slightly less damage and move a bit slower"
+			"item_logname"				""
+			"item_iconname"				""
+
+			"image_inventory"			"backpack/weapons/c_models/c_cremators_catch"
+			"model_player"				"models/weapons/c_models/c_cremators_catch/c_cremators_catch.mdl"
+			"attach_to_hands"			"1"
+			"used_by_classes"
+			{
+				"pyro" 	"primary"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"	"10 0 -10"
+
+				"flame_gravity"					"0"
+				"flame_drag"					"8.5"
+				"flame_up_speed"				"50"
+				"flame_speed"					"2450"
+				"flame_spread_degree"			"2.8"
+				"flame_lifetime"				"0.6"
+				"flame_random_life_time_offset"	"0.1"
+				"flame_velocity_fade_start"		"0.3"
+				"flame_velocity_fade_end"		"0.5"
+			}
+			"attributes"
+			{
+				"hidden separator"		"1"
+				"airblast_give_teammate_speed_boost"
+				{
+					"attribute_class"	"airblast_give_teammate_speed_boost"
+					"value"				"1"
+				}
+				"add condition on kill"
+				{
+					"attribute_class"	"add_onkill_addcond_self"
+					"value"				"137 3"
+				}
+				"move speed penalty"
+				{
+					"attribute_class"	"mult_player_movespeed"
+					"value" 			"0.9"
+				}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"				"0.85"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"	"Weapon_Degreaser.FireStart"
+				"sound_special1"	"Weapon_Degreaser.FireLoop"
+				"sound_burst"		"Weapon_Degreaser.FireLoopCrit"
+				"sound_special3"	"Weapon_Degreaser.FireEnd"
+				"animation_replacement"
+				{
+					"ACT_MP_ATTACK_CROUCH_SECONDARYFIRE"	"ACT_MP_ATTACK_CROUCH_PRIMARY_ALT"
+					"ACT_MP_ATTACK_STAND_SECONDARYFIRE"		"ACT_MP_ATTACK_STAND_PRIMARY_ALT"
+					"ACT_MP_ATTACK_SWIM_SECONDARYFIRE"		"ACT_MP_ATTACK_SWIM_PRIMARY_ALT"
+				}
+			}
+			"mouse_pressed_sound"		"ui/item_flamethrower_pickup.wav"
+			"drop_sound"				"ui/item_heavy_gun_drop.wav"
+		}
+		/////////////
+		// DEMOMAN //
+		/////////////
+//		"1016" //DOUBLE-TAP
 //		{
 
 //		}
-//		"1014" //SOLAR FLARE
+//		"1017" //LAKESIDE PRIDE
 //		{
 
 //		}
-//		"1015" //CREMATOR'S CATCH
+///		"1018" //DRUNKARD'S WRATH
 //		{
 
 //		}
-
-		"1016" //VELES
+		///////////
+		// HEAVY //
+		///////////
+		"1019" //VELES
 		{
 			"name"						"VELEZ"
 			"item_class"				"tf_weapon_minigun"
@@ -1102,7 +1442,7 @@ Bullets penetrate 2 enemies and destroy projectiles
 			"mouse_pressed_sound"		"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"				"ui/item_heavy_gun_drop.wav"
 		}
-		"1017" //BULLETPROOF BATTERY
+		"1020" //BULLETPROOF BATTERY
 		{
 			"name"						"BULLETPROOF BATTERY"
 			"item_class"				"tf_weapon_minigun"
@@ -1178,7 +1518,7 @@ Spread increases as health decreases"
 			"mouse_pressed_sound"		"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"				"ui/item_heavy_gun_drop.wav"
 		}
-		"1018" //PERFORATOR
+		"1021" //PERFORATOR
 		{
 			"name"						"PERFORATOR"
 			"item_class"				"tf_weapon_minigun"
@@ -1256,7 +1596,7 @@ Ammo drains much faster"
 			"mouse_pressed_sound"		"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"				"ui/item_heavy_gun_drop.wav"
 		}
-		"1019" //VLADISLAVA
+		"1022" //VLADISLAVA
 		{
 			"name"						"VLADISLAVA"
 			"item_class"				"tf_weapon_minigun"
@@ -1348,75 +1688,6 @@ Consumes 6 ammo per second revved"
 			}
 			"mouse_pressed_sound" 		"ui/item_heavy_gun_pickup.wav"
 			"drop_sound" 				"ui/item_heavy_gun_drop.wav"
-		}
-
-		"2004" //FISHWHACKER
-		{
-			"name"				"Fishwhacker"
-			"item_name"			"#TF_Weapon_Fishwhacker"
-			"item_type_name"	"#TF_Weapon_Club"
-			"item_description"	"#TF_Weapon_Fishwhacker_Desc"
-			"item_quality"		"normal"
-			"propername"		"1"
-
-			"item_class"		"tf_weapon_club"
-			"item_slot"			"melee"
-			"used_by_classes"
-			{
-				"Sniper"		"1"
-			}
-			"attributes"
-			{
-				"bleeding duration"
-				{
-					"attribute_class"	"bleeding_duration"
-					"value"				"2"
-				}
-				"crit vs bleeding players"
-				{
-					"attribute_class"	"crit_vs_bleeding_players"
-					"value"				"1"
-				}
-				"hit self on miss"
-				{
-					"attribute_class"	"hit_self_on_miss"
-					"value"				"1"
-				}
-				"add condition on miss"
-				{
-					"attribute_class"	"onmiss_addcond"
-					"value"				"30 2"
-				}
-				"crit mod disabled"
-				{
-					"attribute_class"	"mult_crit_chance"
-					"value"				"1"
-				}
-				"hidden separator"		"1"
-				"particle on melee hit"
-				{
-					"attribute_class"	"particle_on_melee_hit"
-					"value"				"impact_wood"
-				}
-			}
-			"model_world"		"models/weapons/w_models/w_fishwhacker.mdl"
-			"model_player"		"models/weapons/v_models/v_fishwhacker_sniper.mdl"
-			"attach_to_hands"	"2"
-			"static_attrs"
-			{
-				"min_viewmodel_offset"	"10 0 -6"
-			}
-			"visuals"
-			{
-				"sound_melee_hit"		"Weapon_Fishwhacker.HitFlesh"
-				"sound_melee_hit_world"	"Weapon_Fishwhacker.HitWorld"
-			}
-			"item_logname"	"fishwhacker"
-			"item_iconname"	"fishwhacker"
-
-			"image_inventory"		"backpack/weapons/w_models/w_fishwhacker"
-			"mouse_pressed_sound"	"ui/item_wood_pole_pickup.wav"
-			"drop_sound"			"ui/item_wood_weapon_drop.wav"
 		}
 	}
 	"attributes"
