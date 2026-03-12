@@ -28,9 +28,7 @@
 			"propername"				"1"
 			"item_name"					"Dug-Out Duster"
 			"item_type_name"			"#TF_Weapon_Shotgun"
-			"item_description"			"More accurate, larger clipsize
-
-Longer deploy time, longer reload time"
+			"item_description"			"Built in the finest dust pits of dustbowl!"
 			"item_logname"				""
 			"item_iconname"				""
 
@@ -50,7 +48,6 @@ Longer deploy time, longer reload time"
 			}
 			"attributes"
 			{
-				"hidden separator"		"1"
 				"weapon spread bonus"
 				{
 					"attribute_class" 	"mult_spread_scale"
@@ -71,6 +68,7 @@ Longer deploy time, longer reload time"
 					"attribute_class"	"mult_reload_time"
 					"value"				"1.5"
 				}
+				"hidden separator"		"1"
 			}
 			"visuals"
 			{
@@ -89,9 +87,7 @@ Longer deploy time, longer reload time"
 			"propername"				"1"
 			"item_name"					"Broken Steel"
 			"item_type_name"			"#TF_Weapon_Shotgun"
-			"item_description"			"Deals considerably more damage
-
-Less accurate, slower firing rate"
+			"item_description"			"That's right, because steel is heavier than feathers!"
 			"item_logname"				""
 			"item_iconname"				""
 
@@ -111,13 +107,12 @@ Less accurate, slower firing rate"
 			}
 			"attributes"
 			{
-				"hidden separator"		"1"
 				"damage bonus"
 				{
 					"attribute_class" 	"mult_dmg"
 					"value" 			"1.4"
 				}
-				"weapon spread bonus"
+				"weapon spread penalty"
 				{
 					"attribute_class" 	"mult_spread_scale"
 					"value" 			"1.3"
@@ -127,6 +122,7 @@ Less accurate, slower firing rate"
 					"attribute_class" 	"mult_postfiredelay"
 					"value" 			"1.2"
 				}
+				"hidden separator"		"1"
 			}
 			"visuals"
 			{
@@ -163,22 +159,37 @@ Less accurate, slower firing rate"
 					"attribute_class"	"crit_vs_bleeding_players"
 					"value"				"1"
 				}
+				"on miss marked for death"
+				{
+					"attribute_class"	"DISPLAY_ONLY"
+					"value"				"1"
+				}
 				"hit self on miss"
 				{
 					"attribute_class"	"hit_self_on_miss"
 					"value"				"1"
 				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"				"0"
+				}
+				"hidden separator"		"1"
 				"add condition on miss"
 				{
 					"attribute_class"	"onmiss_addcond"
 					"value"				"30 2"
 				}
-				"crit mod disabled"
+				"damage penalty"
 				{
-					"attribute_class"	"mult_crit_chance"
+					"attribute_class"	"mult_dmg"
 					"value"				"1"
 				}
-				"hidden separator"		"1"
+				"fishwhacker sweep"
+				{
+					"attribute_class"	"deflect_on_smack_hit_player"
+					"value"				"0"
+				}
 				"particle on melee hit"
 				{
 					"attribute_class"	"particle_on_melee_hit"
@@ -207,7 +218,154 @@ Less accurate, slower firing rate"
 		///////////
 		// SCOUT //
 		///////////
-		"1003" //QUAD-OFF
+		"1003" //B.R. BASE-HITTER
+		{
+			"name"						"B.R. BASE-HITTER"
+			"item_class"				"tf_weapon_grenadelauncher"
+			"item_slot"					"primary"
+
+			"propername"				"1"
+			"item_name"					"B.R. Base-Hitter"
+			"item_type_name"			"Baseball Gun"
+			"item_description"			"If ya can't tell, they're filled with metal bearings, bozo!"
+			"item_logname"				""
+			"item_iconname"				""
+
+			"image_inventory"			"backpack/weapons/w_models/w_baseballgun_alt"
+			"model_world"				"models/weapons/w_models/w_baseballgun_alt.mdl"
+			"model_player"				"models/weapons/v_models/v_baseballgun_alt_scout.mdl"
+			"attach_to_hands"			"2"
+			"used_by_classes"
+			{
+				"scout" 	"primary"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"	"7 0 -10"
+				"hidden primary max ammo bonus"			"2"
+				"damage bonus hidden"					"0.5"
+				"custom rampup"							"0"
+			}
+			"attributes"
+			{
+				"weapon fires baseballs"
+				{
+					"attribute_class"	"DISPLAY_ONLY"
+					"value"				"1"
+				}
+				"slow enemy on hit"
+				{
+					"attribute_class" 	"mult_onhit_enemyspeed"
+					"value" 			"1"
+				}
+//				"damage at range increased"
+//				{
+//					"attribute_class"	"DISPLAY_ONLY"
+//					"value"				"1.35"
+//				}
+				"override projectile type"
+				{
+					"attribute_class"	"override_projectile_type"
+					"value"				"17"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"				"0.6"
+				}
+				"Reload time decreased"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value"				"0.7"
+				}
+				"clip size penalty"
+				{
+					"attribute_class"	"DISPLAY_ONLY"
+					"value"				"0.67"
+				}
+				"hidden separator"		"1"
+				"longer damage falloff distance"
+				{
+					"attribute_class"	"mult_falloff_distance"
+					"value"				"0" 
+				}
+				"blast splash damage decreased"
+				{
+					"attribute_class"	"mult_explosion_splash_damage"
+					"value"				"0"
+				}
+				"fuse bonus"
+				{
+					"attribute_class"	"fuse_mult"
+					"value"				"2"
+				}
+				"Blast radius decreased"
+				{
+					"attribute_class"	"mult_explosion_radius"
+					"value"				"0"
+				}
+				"custom projectile model"
+				{
+					"attribute_class"	"custom_projectile_model"
+					"value"				"models/weapons/w_models/w_baseball.mdl"
+				}
+				"apply look velocity on damage"
+				{
+					"attribute_class"	"apply_look_velocity_on_damage"
+					"value"				"-500"
+				}
+				"apply z velocity on damage"
+				{
+					"attribute_class"	"apply_z_velocity_on_damage"
+					"value"				"-350"
+				}
+				"projectile speed increased"														// Hidden since it doesn't help imply much about weapon function
+				{
+					"attribute_class"	"mult_projectile_speed"
+					"value"				"2.35"
+				}
+				"Reload time start additive"
+				{
+					"attribute_class"	"mult_reload_time_start"
+					"value"				"-0.275"
+				}
+				"clip size bonus"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"				"1.5"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_BaseballGun.Single"
+				"sound_burst"			"Weapon_BaseballGun.SingleCrit"
+				"sound_reload"			"Weapon_Scatter_Gun.WorldReload"
+				"explosion_effect"		"mvm_loot_dustup"
+			}
+			"visuals_red"
+			{
+				"trail_effect"			"stunballtrail_red"
+				"trail_effect_crit"		"stunballtrail_red_crit"
+			}
+			"visuals_blu"
+			{
+				"trail_effect"			"stunballtrail_blue"
+				"trail_effect_crit"		"stunballtrail_blue_crit"
+			}
+			"visuals_grn"
+			{
+				"trail_effect"			"stunballtrail_green"
+				"trail_effect_crit"		"stunballtrail_green_crit"
+			}
+			"visuals_ylw"
+			{
+				"trail_effect"			"stunballtrail_yellow"
+				"trail_effect_crit"		"stunballtrail_yellow_crit"
+			}
+			"mouse_pressed_sound"		"ui/item_medium_gun_pickup.wav"
+			"drop_sound"				"ui/item_heavy_gun_drop.wav"
+		}
+		"1004" //QUAD-OFF
 		{
 			"name"						"QUAD-OFF"
 			"item_class"				"tf_weapon_scattergun"
@@ -217,26 +375,24 @@ Less accurate, slower firing rate"
 			"propername"				"1"
 			"item_name"					"Quad-Off"
 			"item_type_name"			"#TF_Weapon_Scattergun"
-			"item_description"			"Extreme knockback, damage, lower health faster fire rate
-
-Extreme recoil, lower clipsize, longer reload time"
+			"item_description"			"This thing's got a nasty kick!"
 			"item_logname"				""
 			"item_iconname"				""
 
-			"image_inventory" 			"backpack/weapons/c_models/c_quad_off"
-			"model_player" 				"models/weapons/c_models/c_quad_off.mdl"
-			"attach_to_hands"			"1"
+			"image_inventory"			"backpack/weapons/c_models/c_quad_off"
+			"model_world"				"models/weapons/w_models/w_quad_barrel.mdl"
+			"model_player"				"models/weapons/v_models/v_quad_barrel.mdl"
+			"attach_to_hands"			"2"
 			"used_by_classes"
 			{
 				"scout" 	"primary"
 			}
 			"static_attrs"
 			{
-				"min_viewmodel_offset"	"10 0 -10"
+				"min_viewmodel_offset"	"13 0 -10"
 			}
 			"attributes"
 			{
-				"hidden separator"		"1"
 				"scattergun has knockback"
 				{
 					"attribute_class" 	"set_scattergun_has_knockback"
@@ -252,15 +408,36 @@ Extreme recoil, lower clipsize, longer reload time"
 					"attribute_class"	"mult_dmg"
 					"value"				"1.3"
 				}
+				"quad-off reload time"
+                {
+                    "attribute_class"   "DISPLAY_ONLY"
+                    "value"             "1"
+                }
+				"spread penalty"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"				"2"
+				}
 				"clip size penalty"
 				{
 					"attribute_class"	"mult_clipsize"
 					"value"				"0.67"
 				}
+				"apply self knockback"
+				{
+					"attribute_class"	"apply_self_knockback"
+					"value"				"125"
+				}
+				"hidden separator"		"1"
 				"scattergun no reload single"
 				{
 					"attribute_class" 	"set_scattergun_no_reload_single"
 					"value" 			"1"
+				}
+				"Reload time refill additive"
+				{
+					"attribute_class"	"mult_reload_time_refill"
+					"value" 			"3.75"
 				}
 				"punch angle mod add hidden"
 				{
@@ -272,64 +449,189 @@ Extreme recoil, lower clipsize, longer reload time"
 					"attribute_class" 	"disable_fancy_class_select_anim"
 					"value" 			"1"
 				}
-				"apply self knockback"
-				{
-					"attribute_class"	"apply_self_knockback"
-					"value"				"125"
-				}
-				"reload time increased hidden"
-                {
-                    "attribute_class"   "mult_reload_time_hidden"
-                    "value"             "1.75"
-                }
-				"spread penalty"
-				{
-					"attribute_class"	"mult_spread_scale"
-					"value"				"2"
-				}
 			}
 			"visuals"
 			{
-				"animation_replacement"
-				{
-					"ACT_VM_IDLE" "ACT_ITEM2_VM_IDLE"
-					"ACT_VM_DRAW" "ACT_ITEM2_VM_DRAW"
-					"ACT_VM_HOLSTER" "ACT_ITEM2_VM_HOLSTER"
-					"ACT_VM_PULLBACK" "ACT_ITEM2_VM_PULLBACK"
-					"ACT_VM_PRIMARYATTACK" "ACT_ITEM2_VM_PRIMARYATTACK"
-					"ACT_VM_SECONDARYATTACK" "ACT_ITEM2_VM_SECONDARYATTACK"
-					"ACT_VM_RELOAD" "ACT_ITEM2_VM_RELOAD"
-					"ACT_VM_DRYFIRE" "ACT_ITEM2_VM_DRYFIRE"
-					"ACT_VM_IDLE_TO_LOWERED" "ACT_ITEM2_VM_IDLE_TO_LOWERED"
-					"ACT_VM_IDLE_LOWERED" "ACT_ITEM2_VM_IDLE_LOWERED"
-					"ACT_VM_LOWERED_TO_IDLE" "ACT_ITEM2_VM_LOWERED_TO_IDLE"
-					"ACT_PRIMARY_VM_INSPECT_START" "ACT_ITEM2_VM_INSPECT_START"
-					"ACT_PRIMARY_VM_INSPECT_IDLE" "ACT_ITEM2_VM_INSPECT_IDLE"
-					"ACT_PRIMARY_VM_INSPECT_END" "ACT_ITEM2_VM_INSPECT_END"
-				}
-				"sound_single_shot" 	"Weapon_Scatter_Gun_Double.Single"
-				"sound_burst" 			"Weapon_Scatter_Gun_Double.SingleCrit"
+				"sound_single_shot" 	"Weapon_QuadBarrel.Single"
+				"sound_burst" 			"Weapon_QuadBarrel.SingleCrit"
 			}
 			"mouse_pressed_sound"		"ui/item_medium_gun_pickup.wav"
 			"drop_sound"				"ui/item_heavy_gun_drop.wav"
 		}
-		"1004" //ONE MOUTHED
+		"1005" //TESLA SHOCKER
 		{
-			"name"						"ONE MOUTHED"
+			"name"						"TESLA SHOCKER"
+			"item_class"				"tf2c_weapon_coilgun"
+			"item_slot"					"primary"
+			"bucket"					"0"
+			"bucket_position"			"0"
+
+			"propername"				"1"
+			"item_name"					"Tesla Shocker"
+			"item_type_name"			"Electric Scattergun"
+			"item_description"			"Shockin', ain't it?"
+			"item_logname"				""
+			"item_iconname"				""
+
+			"image_inventory"			"backpack/weapons/c_models/c_teslascattergun"
+			"model_world"				"models/weapons/c_models/c_teslascattergun.mdl"
+			"model_player"				"models/weapons/v_models/v_teslagun.mdl"
+			"attach_to_hands"			"2"
+			"used_by_classes"
+			{
+				"scout" 	"primary"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"	"7 0 -10"
+			}
+			"attributes"
+			{
+				"Set DamageType Ignite"														
+				{
+					"attribute_class"	"set_dmgtype_ignite"
+					"value" 			"1"
+				}
+				"minicrit vs burning player"														
+				{
+					"attribute_class"	"or_minicrit_vs_playercond_burning"
+					"value" 			"1"
+				}
+				"dmg bonus vs buildings"
+				{
+					"attribute_class"	"mult_dmg_vs_buildings"
+					"value"				"2.5"
+				}
+				"tesla shocker faster firing speed"
+				{
+					"attribute_class"	"DISPLAY_ONLY"
+					"value"				"1"
+				}
+				"damage penalty"
+				{
+					"attribute_class"	"DISPLAY_ONLY"
+					"value"				"0.45"
+				}
+				"weapon burn dmg reduced"
+				{
+					"attribute_class"	"mult_wpn_burndmg"
+					"value" 			"0"
+				}
+				"tesla shocker explain"
+				{
+					"attribute_class"	"DISPLAY_ONLY"
+					"value"				"1"
+				}
+				"hidden separator" "1"
+				"bullets per shot bonus"
+				{
+					"attribute_class"	"mult_bullets_per_shot"
+					"value"				"10"
+				}
+				"mod use custom ammo type"
+				{
+					"attribute_class"	"mod_use_custom_ammo_type"
+					"value"				"5"
+				}
+				"maxammo grenades2 increased"
+				{
+					"attribute_class"	"mult_maxammo_grenades2"
+					"value" 			"2"
+				}
+				"override projectile type"
+				{
+					"attribute_class"	"override_projectile_type"
+					"value"				"1"
+				}
+				"spread penalty"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"				"3.75"
+				}
+//				"Reload time start additive"
+//				{
+//					"attribute_class"	"mult_reload_time_start"
+//					"value"				"0.2"
+//				}
+				"damage bonus hidden"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"				"0.225"
+				}
+				"clip size penalty"	
+				{
+					"attribute_class"	"mult_clipsize"
+					"value" 			"0.7"
+				}
+				"set reload single"
+				{
+					"attribute_class"	"set_reload_single"
+					"value"				"1"
+				}
+				"reload time increased"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value" 			"1"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"				"1"
+				}
+				"custom rampup"
+				{
+					"attribute_class"	"mod_custom_rampup"
+					"value" 			"1.75"
+				}
+				"weapon burn time reduced additive"
+				{
+					"attribute_class"	"mult_wpn_burntime"
+					"value"				"2.5"
+				}
+				"blast dmg to self increased"
+				{
+					"attribute_class"	"blast_dmg_to_self"
+					"value"				"0.42"
+				}
+				"damage force increase"
+				{
+					"attribute_class"	"damage_force_reduction"
+					"value" 			"0.5"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_Tesla_Shocker.Single"
+				"sound_burst"			"Weapon_Tesla_Shocker.SingleCrit"
+				"sound_reload"			"Weapon_Tesla_Shocker.Reload"
+				"sound_special2"        "Weapon_Tesla_Shocker.Explosion"
+				"sound_special3"        "Weapon_Tesla_Shocker.Charge"
+				"muzzle_flash"			"muzzle_scattershock"
+				"tracer_effect"			"bullet_scattershock_tracer01"
+				"animation_replacement"
+				{
+					"ACT_VM_PRIMARYATTACK_SPECIAL"		"ACT_VM_PRIMARYATTACK"
+					"ACT_VM_PULLBACK"					"ACT_RELOAD_FINISH"
+				}
+			}
+			"mouse_pressed_sound"		"ui/item_medium_gun_pickup.wav"
+			"drop_sound"				"ui/item_heavy_gun_drop.wav"
+		}
+		"1006" //BECKER
+		{
+			"name"						"BECKER"
 			"item_class"				"tf_weapon_scattergun"
 			"item_slot"					"primary"
 
 			"propername"				"1"
-			"item_name"					"One Mouthed"
+			"item_name"					"Becker"
 			"item_type_name"			"#TF_Weapon_Scattergun"
-			"item_description"			"Fires powerful slug rounds that minicrit on headshots
-
-Slower reload rate"
+			"item_description"			"Yeah, she's right at my beck and call to fracture ya skulls!"
 			"item_logname"				""
 			"item_iconname"				""
 
-			"image_inventory" 			"backpack/weapons/c_models/c_one_mouthed"
-			"model_player" 				"models/weapons/c_models/c_one_mouthed.mdl"
+			"image_inventory" 			"backpack/weapons/c_models/c_becker"
+			"model_player" 				"models/weapons/c_models/c_becker.mdl"
 			"attach_to_hands"			"1"
 			"used_by_classes"
 			{
@@ -337,25 +639,40 @@ Slower reload rate"
 			}
 			"static_attrs"
 			{
-				"min_viewmodel_offset"	"10 0 -10"
+				"min_viewmodel_offset"	"7 0 -10"
 			}
 			"attributes"
 			{
-				"hidden separator" "1"
-				"damage bonus"
+				"has slug rounds"
 				{
-					"attribute_class" 	"mult_dmg"
-					"value" 			"7"
+					"attribute_class" 	"DISPLAY_ONLY"
+					"value" 			"1"
 				}
-				"reload time increased hidden"
+				"minicrits headshots DISPLAY ONLY"
+				{
+					"attribute_class" 	"DISPLAY_ONLY"
+					"value" 			"1"
+				}
+				"reload time increased"
                 {
-                    "attribute_class"   "mult_reload_time_hidden"
+                    "attribute_class"   "mult_reload_time"
                     "value"             "1.2"
                 }
+				"hidden separator" "1"
 				"can headshot"
 				{
 					"attribute_class" 	"can_headshot"
 					"value" 			"1"
+				}
+				"headshot is minicrit"
+				{
+					"attribute_class" 	"headshot_is_minicrit"
+					"value" 			"1"
+				}
+				"damage bonus"
+				{
+					"attribute_class" 	"mult_dmg"
+					"value" 			"7"
 				}
 				"headshot is minicrit"
 				{
@@ -380,13 +697,13 @@ Slower reload rate"
 			}
 			"visuals"
 			{
-				"sound_single_shot"		"Weapon_Short_Stop.Single"
-				"sound_burst"			"Weapon_Short_Stop.SingleCrit"
+				"sound_single_shot"		"Weapon_Becker.Single"
+				"sound_burst"			"Weapon_Becker.SingleCrit"
 			}
 			"mouse_pressed_sound"		"ui/item_medium_gun_pickup.wav"
 			"drop_sound"				"ui/item_heavy_gun_drop.wav"
 		}
-		"1005" //HOOLIGAN HARMER
+		"1007" //HOOLIGAN HARMER
 		{
 			"name"						"HOOLIGAN HARMER"
 			"item_class"				"tf_weapon_scattergun"
@@ -396,9 +713,7 @@ Slower reload rate"
 			"propername"				"1"
 			"item_name"					"Hooligan Harmer"
 			"item_type_name"			"#TF_Weapon_Scattergun"
-			"item_description"			"Killing the same class repeatedly increases your fire rate
-
-Killing a different class resets your fire rate"
+			"item_description"			"Gramps handed this down to me before he died, somethin' about harming some hooligans..."
 			"item_logname"				""
 			"item_iconname"				""
 
@@ -411,25 +726,29 @@ Killing a different class resets your fire rate"
 			}
 			"static_attrs"
 			{
-				"min_viewmodel_offset"	"10 0 -10"
+				"min_viewmodel_offset"	"7 0 -10"
 			}
 			"attributes"
 			{
-				"hidden separator" "1"
-				"reload time increased hidden"
-                {
-                    "attribute_class"   "mult_reload_time_hidden"
-                    "value"             "0.75"
-                }
-				"kill combo fire rate boost"
+				"Hooligan Harmer Combo Positive"
 				{
-					"attribute_class" 	"kill_combo_fire_rate_boost"
-					"value" 			"0.1"
+					"attribute_class" 	"DISPLAY_ONLY"
+					"value" 			"1"
 				}
 				"fire rate bonus"
 				{
 					"attribute_class" 	"mult_postfiredelay"
-					"value" 			"0.5"
+					"value" 			"0.8"
+				}
+				"reload time decreased"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value"				"0.6"
+				}
+				"Hooligan Harmer Combo Negative"
+				{
+					"attribute_class" 	"DISPLAY_ONLY"
+					"value" 			"1"
 				}
 				"clip size penalty"
 				{
@@ -440,6 +759,12 @@ Killing a different class resets your fire rate"
 				{
 					"attribute_class" 	"set_scattergun_no_reload_single"
 					"value" 			"1"
+				}
+				"hidden separator" "1"
+				"kill combo fire rate boost"
+				{
+					"attribute_class" 	"kill_combo_fire_rate_boost"
+					"value" 			"0.2"
 				}
 				"disable fancy class select anim"
 				{
@@ -462,9 +787,6 @@ Killing a different class resets your fire rate"
 					"ACT_VM_IDLE_TO_LOWERED" "ACT_ITEM2_VM_IDLE_TO_LOWERED"
 					"ACT_VM_IDLE_LOWERED" "ACT_ITEM2_VM_IDLE_LOWERED"
 					"ACT_VM_LOWERED_TO_IDLE" "ACT_ITEM2_VM_LOWERED_TO_IDLE"
-					"ACT_PRIMARY_VM_INSPECT_START" "ACT_ITEM2_VM_INSPECT_START"
-					"ACT_PRIMARY_VM_INSPECT_IDLE" "ACT_ITEM2_VM_INSPECT_IDLE"
-					"ACT_PRIMARY_VM_INSPECT_END" "ACT_ITEM2_VM_INSPECT_END"
 				}
 				"sound_single_shot" 	"Weapon_Soda_Popper.Single"
 				"sound_burst" 			"Weapon_Soda_Popper.SingleCrit"
@@ -472,7 +794,7 @@ Killing a different class resets your fire rate"
 			"mouse_pressed_sound"		"ui/item_medium_gun_pickup.wav"
 			"drop_sound"				"ui/item_heavy_gun_drop.wav"
 		}
-		"1006" //ROUGH RIDER
+		"1008" //ROUGH RIDER
 		{
 			"name"						"ROUGH RIDER"
 			"item_class"				"tf_weapon_scattergun"
@@ -481,10 +803,7 @@ Killing a different class resets your fire rate"
 			"propername"				"1"
 			"item_name"					"Rough Rider"
 			"item_type_name"			"#TF_Weapon_Scattergun"
-			"item_description"			"Successive hits mini-crits, higher clipsize, faster fire rate
-more accurate, faster reload time
-
-Halved bullets per shot"
+			"item_description"			"Runnin' won't stop the hurtin'!"
 			"item_logname"				""
 			"item_iconname"				""
 
@@ -497,36 +816,41 @@ Halved bullets per shot"
 			}
 			"static_attrs"
 			{
-				"min_viewmodel_offset"	"10 0 -10"
+				"min_viewmodel_offset"	"7 0 -10"
 			}
 			"attributes"
 			{
-				"hidden separator"		"1"
+				"Rough Rider Minicrits"
+				{
+					"attribute_class" 	"DISPLAY_ONLY"
+					"value" 			"1"
+				}
 				"clip size bonus"
 				{
 					"attribute_class" 	"mult_clipsize"
 					"value" 			"1.34"
-				}
-				"fire rate bonus"
-				{
-					"attribute_class" 	"mult_postfiredelay"
-					"value" 			"0.67"
 				}
 				"weapon spread bonus"
 				{
 					"attribute_class" 	"mult_spread_scale"
 					"value" 			"0.5"
 				}
-				"bullets per shot bonus"
+				"fire rate bonus"
 				{
-					"attribute_class" 	"mult_bullets_per_shot"
-					"value" 			"0.5"
+					"attribute_class" 	"mult_postfiredelay"
+					"value" 			"0.66"
 				}
 				"Reload time decreased"
 				{
 					"attribute_class"	"mult_reload_time"
 					"value"				"0.85"
 				}
+				"bullets per shot penalty"
+				{
+					"attribute_class" 	"mult_bullets_per_shot"
+					"value" 			"0.5"
+				}
+				"hidden separator"		"1"
 				"add condition on hit self"
 				{
 					"attribute_class"	"add_onhit_addcond_self_weapon"
@@ -535,8 +859,8 @@ Halved bullets per shot"
 			}
 			"visuals"
 			{
-				"sound_single_shot" 	"Weapon_Brawler_Blaster.Single"
-				"sound_burst" 			"Weapon_Brawler_Blaster.SingleCrit"
+				"sound_single_shot" 	"Weapon_RoughRider.Single"
+				"sound_burst" 			"Weapon_RoughRider.SingleCrit"
 			}
 			"mouse_pressed_sound"		"ui/item_medium_gun_pickup.wav"
 			"drop_sound"				"ui/item_heavy_gun_drop.wav"
@@ -544,7 +868,7 @@ Halved bullets per shot"
 		/////////////
 		// SOLDIER //
 		/////////////
-		"1007" //DOME BREAKER
+		"1009" //DOME BREAKER
 		{
 			"name"						"DOME BREAKER"
 			"item_class"				"tf_weapon_rocketlauncher"
@@ -621,7 +945,7 @@ Smaller clip size"
 			"mouse_pressed_sound"		"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"				"ui/item_heavy_gun_drop.wav"
 		}
-		"1008" //HORNET'S NEST
+		"1010" //HORNET'S NEST
 		{
 			"name"						"HORNET'S NEST"
 			"item_class"				"tf_weapon_rocketlauncher"
@@ -660,7 +984,7 @@ Reduced explosion radius"
 				"punch angle mod add hidden"
 				{
 					"attribute_class"	"punch_angle_mod"
-					"value" 			"5"
+					"value" 			"2"
 				}
 				"rocket gravity"
 				{
@@ -732,7 +1056,7 @@ Reduced explosion radius"
 			"mouse_pressed_sound"		"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"				"ui/item_heavy_gun_drop.wav"
 		}
-		"1009" //GROUND W.A.S.P.
+		"1011" //GROUND W.A.S.P.
 		{
 			"name"						"GROUND W.A.S.P."
 			"item_class"				"tf_weapon_rocketlauncher"
@@ -803,7 +1127,7 @@ Deals less damage, slower movement speed"
 			"mouse_pressed_sound"		"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"				"ui/item_heavy_gun_drop.wav"
 		}
-		"1010" //SPITFIRE
+		"1012" //SPITFIRE
 		{
 			"name"						"SPITFIRE"
 			"item_class"				"tf_weapon_rocketlauncher_airstrike"
@@ -885,10 +1209,123 @@ Reduced explosion radius"
 			"mouse_pressed_sound"		"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"				"ui/item_heavy_gun_drop.wav"
 		}
+		"1013" //QUAD-LAUNCHER
+		{
+			"name"						"QUAD-LAUNCHER"
+			"item_class"				"tf_weapon_rocketlauncher"
+			"item_slot"					"primary"
+
+			"propername"				"1"
+			"item_name"					"Quad-Launcher"
+			"item_type_name"			"#TF_Weapon_RocketLauncher"
+			"item_description"			""
+			"item_logname"				""
+			"item_iconname"				""
+
+			"image_inventory" 			"backpack/workshop/weapons/c_models/c_quad_launcher/c_quad_launcher"
+			"model_world" 				"models/workshop/weapons/c_models/c_quad_launcher/c_quad_launcher.mdl"
+			"model_player" 				"models/weapons/v_models/v_quadlauncher.mdl"
+			"attach_to_hands"			"2"
+			"used_by_classes"
+			{
+				"soldier" 	"primary"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"	"10 -3 -10"
+			}
+			"attributes"
+			{
+				"hidden separator"		"1"
+				"set rocket detonate mode"
+				{
+					"attribute_class"	"set_rocket_detonate_mode"
+					"value"				"3"
+				}
+				"add ammo on kill"
+				{
+					"attribute_class"	"add_ammo_on_kill"
+					"value"				"4"
+				}
+				"Blast radius decreased"
+				{
+					"attribute_class"	"mult_explosion_radius"
+					"value"				"0.5"
+				}
+				"mod ammo per shot"
+				{
+					"attribute_class"	"mod_ammo_per_shot"
+					"value"				"4"
+				}
+				"set reload single"
+				{
+					"attribute_class"	"set_reload_single"
+					"value"				"1"
+				}
+				"mod ammo per reload"
+				{
+					"attribute_class"	"mod_ammo_per_reload"
+					"value"				"3"
+				}
+				"Reload time start"
+				{
+					"attribute_class"	"mult_reload_time_start"
+					"value"				"0.01"
+				}
+				"Reload time refill"
+				{
+					"attribute_class"	"mult_reload_time_refill"
+					"value"				"10"
+				}
+				"mod projectiles per shot"	
+				{
+					"attribute_class"	"mod_projectiles_per_shot"
+					"value" 			"3"
+				}
+				"Projectile speed increased"
+				{
+					"attribute_class"	"mult_projectile_speed"
+					"value"				"1"
+				}
+				"projectile spread angle penalty"
+				{
+					"attribute_class" 	"projectile_spread_angle"
+					"value" 			"6"
+				}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"				"0.5"
+				}
+                "rocket limited lifetime"														
+				{
+					"attribute_class"	"rocket_lifetime"
+					"value"				"1"
+				}
+				"punch angle mod add hidden"
+				{
+					"attribute_class"	"punch_angle_mod"
+					"value" 			"10"
+				}
+				"apply self knockback"
+				{
+					"attribute_class"	"apply_self_knockback"
+					"value" 			"200"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_QuadLauncher.Shoot"
+				"sound_burst"			"Weapon_QuadLauncher.ShootCrit"
+				"sound_special1"		"Weapon_Airstrike.Explosion"
+			}
+			"mouse_pressed_sound"		"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"				"ui/item_heavy_gun_drop.wav"
+		}
 		//////////
 		// PYRO //
 		//////////
-		"1011" //MOLOTOV LAUNCHER
+		"1014" //MOLOTOV LAUNCHER
 		{
 			"name"						"MOLOTOV LAUNCHER"
 			"item_class"				"tf_weapon_grenadelauncher"
@@ -998,6 +1435,7 @@ No airblast"
 				"sound_single_shot"		"Weapon_CowMangler.Single"
 				"sound_burst"			"Weapon_CowMangler.SingleCharged"
 				"sound_special1"		"Weapon_CowMangler.Explode"
+				"explosion_effect"		"0_SickExplosion_AIR"
 				"animation_replacement"
 				{
 					"ACT_MP_ATTACK_CROUCH_PRIMARY"		"ACT_MP_ATTACK_CROUCH_PRIMARY_ALT"
@@ -1012,7 +1450,7 @@ No airblast"
 			"mouse_pressed_sound"		"ui/item_flamethrower_pickup.wav"
 			"drop_sound"				"ui/item_heavier_gun_drop.wav"
 		}
-		"1012" //MUTINY INCINERATOR
+		"1015" //MUTINY INCINERATOR
 		{
 			"name"						"MUTINY INCINERATOR"
 			"item_class"				"tf_weapon_flamethrower"
@@ -1105,7 +1543,7 @@ Increased airblast cost, airblast destroys projectiles"
 			"mouse_pressed_sound"		"ui/item_flamethrower_pickup.wav"
 			"drop_sound"				"ui/item_heavy_gun_drop.wav"
 		}
-		"1013" //MAKESHIFT MUTILATOR
+		"1016" //MAKESHIFT MUTILATOR
 		{
 			"name"						"MAKESHIFT MUTILATOR"
 			"item_class"				"tf_weapon_flamethrower"
@@ -1115,7 +1553,7 @@ Increased airblast cost, airblast destroys projectiles"
 			"item_name"					"Makeshift Mutilator"
 			"item_type_name"			"#TF_Weapon_FlameThrower"
 			"item_description"			"Applies tranq effect to enemies on hit with flames
-Enemies with this effect can be crit'ed by any melee
+Enemies with this effect can be crit by any melee
 Much faster weapon switch speed
 
 Flames deal near no damage and zero afterburn damage"
@@ -1195,7 +1633,7 @@ Flames deal near no damage and zero afterburn damage"
 			"mouse_pressed_sound"		"ui/item_flamethrower_pickup.wav"
 			"drop_sound"				"ui/item_heavy_gun_drop.wav"
 		}
-		"1014" //SOLAR FLARE
+		"1017" //SOLAR FLARE
 		{
 			"name"						"SOLAR FLARE"
 			"item_class"				"tf_weapon_rocketlauncher_fireball"
@@ -1239,7 +1677,7 @@ Far shorter afterburn time and deals less damage"
 				"heal on hit for slowfire"
 				{
 					"attribute_class"	"add_onhit_addhealth"
-					"value"				"7"
+					"value"				"5"
 				}
 				"weapon burn time reduced"
 				{
@@ -1273,7 +1711,7 @@ Far shorter afterburn time and deals less damage"
 			"mouse_pressed_sound"		"ui/item_flamethrower_pickup.wav"
 			"drop_sound"				"ui/item_heavy_gun_drop.wav"
 		}
-		"1015" //CREMATOR'S CATCH
+		"1018" //CREMATOR'S CATCH
 		{
 			"name"						"CREMATOR'S CATCH"
 			"item_class"				"tf_weapon_flamethrower"
@@ -1283,9 +1721,9 @@ Far shorter afterburn time and deals less damage"
 			"item_name"					"Cremator's Catch"
 			"item_type_name"			"#TF_Weapon_FlameThrower"
 			"item_description"			"Airblasting teammates give both of you a speed boost
-Killing an enemy gives you haste for 3 seconds
+Killing an enemy gives you haste for 1 seconds
 
-Deals slightly less damage and move a bit slower"
+Deals less damage and move a bit slower"
 			"item_logname"				""
 			"item_iconname"				""
 
@@ -1321,12 +1759,12 @@ Deals slightly less damage and move a bit slower"
 				"add condition on kill"
 				{
 					"attribute_class"	"add_onkill_addcond_self"
-					"value"				"137 3"
+					"value"				"137 1"
 				}
 				"move speed penalty"
 				{
 					"attribute_class"	"mult_player_movespeed"
-					"value" 			"0.9"
+					"value" 			"0.85"
 				}
 				"damage penalty"
 				{
@@ -1353,22 +1791,22 @@ Deals slightly less damage and move a bit slower"
 		/////////////
 		// DEMOMAN //
 		/////////////
-//		"1016" //DOUBLE-TAP
+//		"1019" //DOUBLE-TAP
 //		{
 
 //		}
-//		"1017" //LAKESIDE PRIDE
+//		"1020" //LAKESIDE PRIDE
 //		{
 
 //		}
-///		"1018" //DRUNKARD'S WRATH
+///		"1021" //DRUNKARD'S WRATH
 //		{
 
 //		}
 		///////////
 		// HEAVY //
 		///////////
-		"1019" //VELES
+		"1022" //VELES
 		{
 			"name"						"VELEZ"
 			"item_class"				"tf_weapon_minigun"
@@ -1442,7 +1880,7 @@ Bullets penetrate 2 enemies and destroy projectiles
 			"mouse_pressed_sound"		"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"				"ui/item_heavy_gun_drop.wav"
 		}
-		"1020" //BULLETPROOF BATTERY
+		"1023" //BULLETPROOF BATTERY
 		{
 			"name"						"BULLETPROOF BATTERY"
 			"item_class"				"tf_weapon_minigun"
@@ -1518,7 +1956,7 @@ Spread increases as health decreases"
 			"mouse_pressed_sound"		"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"				"ui/item_heavy_gun_drop.wav"
 		}
-		"1021" //PERFORATOR
+		"1024" //PERFORATOR
 		{
 			"name"						"PERFORATOR"
 			"item_class"				"tf_weapon_minigun"
@@ -1596,7 +2034,7 @@ Ammo drains much faster"
 			"mouse_pressed_sound"		"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"				"ui/item_heavy_gun_drop.wav"
 		}
-		"1022" //VLADISLAVA
+		"1025" //VLADISLAVA
 		{
 			"name"						"VLADISLAVA"
 			"item_class"				"tf_weapon_minigun"
@@ -1721,6 +2159,124 @@ Consumes 6 ammo per second revved"
 			"hidden"	"0"
 			"effect_type"	"negative"
 			"stored_as_integer"	"0"
+		}
+		"7003"
+		{
+			"name"	"weapon spread penalty"
+			"attribute_class"	"mult_spread_scale"
+			"description_string"	"%s1% less accurate"
+			"description_format"	"value_is_inverted_percentage"
+			"hidden"	"0"
+			"effect_type"	"negative"
+			"stored_as_integer"	"0"
+		}
+		"7004"
+		{
+			"name"	"on miss marked for death"
+			"attribute_class"	"onmiss_addcond"
+			"description_string"	"On Miss: Mark yourself for death"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"negative"
+			"stored_as_integer"	"0"
+		}
+		"7005"
+		{
+			"name"	"bullets per shot penalty"
+			"attribute_class"	"mult_bullets_per_shot"
+			"description_string"	"%s1% bullets per shot"
+			"description_format"	"value_is_percentage"
+			"hidden"	"0"
+			"effect_type"	"negative"
+			"stored_as_integer"	"0"
+		}
+		"7006"
+		{
+			"name"	"Rough Rider Minicrits"
+			"description_string"	"Successive hits minicrits"
+			"description_format"	"value_is_additive"
+			"effect_type"	"positive"
+		}
+		"7007"
+		{
+			"name"	"Hooligan Harmer Combo Positive"
+			"description_string"	"Killing the same class repeatedly gives +20% fire rate bonus Up to a +60% fire rate bonus"
+			"description_format"	"value_is_additive"
+			"effect_type"	"positive"
+		}
+		"7008"
+		{
+			"name"	"Hooligan Harmer Combo Negative"
+			"description_string"	"Killing a different class resets your fire rate back to +20%"
+			"description_format"	"value_is_additive"
+			"effect_type"	"negative"
+		}
+		"7009"
+		{
+			"name"					"Reload time start additive"
+			"attribute_class"		"mult_reload_time_start"
+			"description_format"	"value_is_additive"
+			"hidden"				"0"
+			"effect_type"			"positive"
+			"stored_as_integer"		"0"
+		}
+        "7010"
+        {
+            "name"					"damage at range increased"
+            "description_string"	"Long distance hits deal +%s1% more damage"
+            "description_format"	"value_is_percentage"
+            "effect_type"			"positive"
+        }
+		"7011"
+		{
+			"name"					"weapon fires baseballs"
+			"description_string"	"Fires high-speed baseballs"
+			"description_format"	"value_is_additive"
+			"effect_type"			"positive"
+		}
+		"7012"
+		{
+			"name"					"tesla shocker explain"
+			"description_string"	"Hold left click to charge a more accurate, powerful shot"
+			"description_format"	"value_is_additive"
+			"effect_type"			"neutral"
+		}
+        "7013"
+        {
+            "name"					"tesla shocker faster firing speed"
+            "description_string"	"34% faster firing speed"
+            "description_format"	"value_is_additive"
+            "effect_type"			"positive"
+        }
+		"7014"
+		{
+			"name"					"has slug rounds"
+			"description_string"	"Fires powerful slug rounds"
+            "description_format"	"value_is_additive"
+			"effect_type"			"positive"
+		}
+        "7015"
+        {
+            "name"					"minicrits headshots DISPLAY ONLY"
+            "description_string"	"Minicrits on headshot"
+            "description_format"	"value_is_additive"
+            "effect_type"			"positive"
+        }
+        "7016"
+        {
+            "name"					"quad-off reload time"
+            "description_string"	"175% slower reload time"
+            "description_format"	"value_is_additive"
+            "effect_type"			"negative"
+        }
+		"7017"
+		{
+			"name"					"Reload time refill additive"
+			"attribute_class"		"mult_reload_time_refill"
+			"description_format"	"value_is_additive"
+			"hidden"				"0"
+			"effect_type"			"positive"
+			"stored_as_integer"		"0"
 		}
 	}
 }

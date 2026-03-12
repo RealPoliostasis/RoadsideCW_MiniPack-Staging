@@ -1,0 +1,235 @@
+//     ____  ____  ___    ____  _____ ________  ______   ________  _________________  __  ___   _       ___________    ____  ____  _   _______
+//    / __ \/ __ \/   |  / __ \/ ___//  _/ __ \/ ____/  / ____/ / / / ___/_  __/ __ \/  |/  /  | |     / / ____/   |  / __ \/ __ \/ | / / ___/
+//   / /_/ / / / / /| | / / / /\__ \ / // / / / __/    / /   / / / /\__ \ / / / / / / /|_/ /   | | /| / / __/ / /| | / /_/ / / / /  |/ /\__ \ 
+//  / _, _/ /_/ / ___ |/ /_/ /___/ // // /_/ / /___   / /___/ /_/ /___/ // / / /_/ / /  / /    | |/ |/ / /___/ ___ |/ ____/ /_/ / /|  /___/ / 
+// /_/ |_|\____/_/  |_/_____//____/___/_____/_____/   \____/\____//____//_/  \____/_/  /_/     |__/|__/_____/_/  |_/_/    \____/_/ |_//____/  
+//
+// The Boring Sound File Coding (Some weapons won't show up because they either use base game sounds or reuse sounds from other places)
+
+//------------------------------------------------------------------------------------//
+// ROUGH RIDER
+//------------------------------------------------------------------------------------//
+
+"Weapon_RoughRider.Single"
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"		"1.0"
+	"wave"			"weapons/roughrider_shoot.wav"
+}
+"Weapon_RoughRider.SingleCrit"
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"		"1.0"
+	"wave"			"weapons/roughrider_shoot_crit.wav"
+}
+//------------------------------------------------------------------------------------//
+// BECKER
+//------------------------------------------------------------------------------------//
+
+"Weapon_Becker.Single"
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"		"1.0"
+	"wave"			"weapons/becker_shoot.wav"
+}
+"Weapon_Becker.SingleCrit"
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"		"1.0"
+	"wave"			"weapons/becker_shoot_crit.wav"
+}
+//------------------------------------------------------------------------------------//
+// B.R. BASE-HITTER
+//------------------------------------------------------------------------------------//
+
+"Weapon_BaseballGun.Single"
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"wave"			"weapons/baseballgun_shoot.wav"
+}
+"Weapon_BaseballGun.SingleCrit"
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"wave"			"weapons/baseballgun_shoot_crit.wav"
+}
+"Weapon_Baseball.Explode"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"	"SNDLVL_95dB"
+	"volume"		"0.25"
+	"wave"			"weapons/baseball_explode.wav"
+}
+//------------------------------------------------------------------------------------//
+// TESLA SHOCKER
+//------------------------------------------------------------------------------------//
+
+"Weapon_Tesla_Shocker.Single"
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"		"1.0"
+	"wave"			"weapons/teslashocker_shoot.wav"
+}
+"Weapon_Tesla_Shocker.SingleCrit"
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"		"1.0"
+	"wave"			"weapons/teslashocker_shoot_crit.wav"
+}
+"Weapon_Tesla_Shocker.Reload"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"		"1.0"
+	"wave"			"weapons/teslashocker_reload.wav"
+}
+"Weapon_Tesla_Shocker.WorldReload"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"		"1.0"
+	"wave"			"weapons/teslashocker_reload.wav"
+}
+"Weapon_Tesla_Shocker.Charge"
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"		"1.0"
+	"wave"			"weapons/teslashocker_charge.wav"
+}
+"Weapon_Tesla_Shocker.Explosion"
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"		"1.0"
+	"wave"			"weapons/teslashocker_explosion.wav"
+}
+//------------------------------------------------------------------------------------//
+// QUAD-OFF
+//------------------------------------------------------------------------------------//
+
+"Weapon_QuadBarrel.TubeOpen"	
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"		"1.0"
+	"wave"			"weapons/quad_barrel/quad_barrel_tube_open.wav"
+}
+"Weapon_QuadBarrel.TubeClose"	
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"		"1.0"
+	"wave"			"weapons/quad_barrel/quad_barrel_tube_close.wav"
+}
+"Weapon_QuadBarrel.ShellsOut"	
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"		"1.0"
+	"wave"			"weapons/quad_barrel/quad_barrel_shells_out.wav"
+}
+"Weapon_QuadBarrel.ShellsIn"	
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"		"1.0"
+	"wave"			"weapons/quad_barrel/quad_barrel_shells_in.wav"
+}
+"Weapon_QuadBarrel.Single"	
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"		"1.0"
+	"wave"			"weapons/quad_barrel/quad_barrel_shoot.wav"
+}
+"Weapon_QuadBarrel.SingleCrit"	
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"		"1.0"
+	"wave"			"weapons/quad_barrel/quad_barrel_shoot_crit.wav"
+}
+/////////////////////////////////////////////////////////////////////////
+"Weapon_BBarrelBreak.TubeOpen"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"	"SNDLVL_74dB"
+	"volume"		"1.0"
+	"wave"			"weapons/quad_barrel/quad_barrel_tube_open.wav" 
+}
+"Weapon_BBarrelBreak.ShellsOut"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"	"SNDLVL_74dB"
+	"volume"		"1.0"
+	"wave"			"weapons/quad_barrel/quad_barrel_shells_out.wav"
+}
+"Weapon_BBarrelBreak.ShellsIn"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"	"SNDLVL_74dB"
+	"volume"		"1.0"
+	"wave"			"weapons/quad_barrel/quad_barrel_shells_in.wav"
+}
+"Weapon_BBarrelBreak.TubeClose"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"	"SNDLVL_74dB"
+	"volume"		"1.0"
+	"wave"			"weapons/quad_barrel/quad_barrel_tube_close.wav"
+}
+"Weapon_QuadShotgun.ShellInsert"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"	"SNDLVL_NORM"
+	"volume"		"1.0"
+	"pitch"			"98, 102"
+	"wave"			"weapons/quad_barrel/quad_barrel_shellinsert.wav"
+}
+//------------------------------------------------------------------------------------//
+// QUAD-LAUNCHER
+//------------------------------------------------------------------------------------//
+
+"Weapon_QuadLauncher.Shoot"
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"		"1.0"
+	"wave"			"weapons/QuadLauncher_Fire.wav"
+}
+"Weapon_QuadLauncher.ShootCrit"
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"		"1.0"
+	"wave"			"weapons/QuadLauncher_Fire_Crit.wav"
+}
+"Weapon_QuadLauncher.Extend"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"	"SNDLVL_74dB"
+	"volume"		".67"
+	"wave"			"weapons/QuadLauncher_Extend.wav"
+}
+"Weapon_QuadLancher.Reload"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"	"SNDLVL_74dB"
+	"volume"		".67"
+	"wave"			"weapons/QuadLauncher_Reload.wav"
+}
+"Weapon_QuadLauncher.Retract"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"	"SNDLVL_74dB"
+	"volume"		".67"
+	"wave"			"weapons/QuadLauncher_Retract.wav"
+}

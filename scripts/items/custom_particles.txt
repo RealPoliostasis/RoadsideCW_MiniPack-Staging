@@ -1,0 +1,19 @@
+particles_manifest
+{
+
+	"file"		"!particles/cwp_fiery_expl.pcf"
+	"file"  	"!particles/db_tracers.pcf"
+	"file"  	"!particles/fireball_test.pcf"
+	"file"  	"!particles/mvm.pcf"
+	"file"  	"!particles/nowp_flamethrower.pcf"
+	"file"		"!particles/nowp_wpnfx.pcf"
+	"file"		"!particles/scattershock_fx.pcf"
+	"file"		"!particles/d3_bullet_tracers.pcf"
+	"file"		"!particles/huge_bullet_tracers.pcf"
+	"file"		"!particles/rockettrailtest.pcf"
+	"file"		"!particles/bucket_explosion.pcf"
+	"file"		"!particles/rockettrailantiaircraft.pcf"
+	"file"		"!particles/big_bullet_particles.pcf"
+	"file"		"!particles/bassbooster.pcf"
+	"file"		"!particles/cwp_expensive_expl.pcf"
+}
