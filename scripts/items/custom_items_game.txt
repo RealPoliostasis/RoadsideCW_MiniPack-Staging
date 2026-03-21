@@ -284,6 +284,11 @@
 					"value"				"0.67"
 				}
 				"hidden separator"		"1"
+				"add condition on hit"
+				{
+					"attribute_class" 	"add_onhit_addcond"
+					"value" 			"139 1"
+				}
 				"longer damage falloff distance"
 				{
 					"attribute_class"	"mult_falloff_distance"
@@ -463,6 +468,7 @@
 			"name"						"TESLA SHOCKER"
 			"item_class"				"tf2c_weapon_coilgun"
 			"item_slot"					"primary"
+			"anim_slot"					"primary"
 			"bucket"					"0"
 			"bucket_position"			"0"
 
@@ -531,11 +537,11 @@
 				"mod use custom ammo type"
 				{
 					"attribute_class"	"mod_use_custom_ammo_type"
-					"value"				"5"
+					"value"				"4"
 				}
-				"maxammo grenades2 increased"
+				"maxammo grenades1 increased"
 				{
-					"attribute_class"	"mult_maxammo_grenades2"
+					"attribute_class"	"mult_maxammo_grenades1"
 					"value" 			"2"
 				}
 				"override projectile type"
@@ -626,7 +632,7 @@
 			"propername"				"1"
 			"item_name"					"Becker"
 			"item_type_name"			"#TF_Weapon_Scattergun"
-			"item_description"			"Yeah, she's right at my beck and call to fracture ya skulls!"
+			"item_description"			"Yeah, she's at my beck n' call to fracture ya skulls!"
 			"item_logname"				""
 			"item_iconname"				""
 
@@ -738,7 +744,7 @@
 				"fire rate bonus"
 				{
 					"attribute_class" 	"mult_postfiredelay"
-					"value" 			"0.8"
+					"value" 			"0.6"
 				}
 				"reload time decreased"
 				{
@@ -764,7 +770,7 @@
 				"kill combo fire rate boost"
 				{
 					"attribute_class" 	"kill_combo_fire_rate_boost"
-					"value" 			"0.2"
+					"value" 			"0.15"
 				}
 				"disable fancy class select anim"
 				{
@@ -865,10 +871,87 @@
 			"mouse_pressed_sound"		"ui/item_medium_gun_pickup.wav"
 			"drop_sound"				"ui/item_heavy_gun_drop.wav"
 		}
+
+		"1009" //MANN MILK
+		{
+			"name"						"MANN MILK"
+			"item_class"				"tf_weapon_jar_milk"
+			"item_slot"					"secondary"
+			"anim_slot"					"item1"
+
+			"propername"				"0"
+			"item_name"					"Mann-Milk"
+			"item_type_name"			"#TF_Weapon_Jar_Milk"
+			"item_description"			"Everybody's favorite non-milk substance! Sponsored by Mann Co!"
+			"item_logname"				""
+			"item_iconname"				""
+
+			"image_inventory" 			"backpack/weapons/c_models/c_mannmilk/c_mannmilk"
+			"model_player" 				"models/weapons/c_models/c_mannmilk/c_mannmilk.mdl"
+			"attach_to_hands"			"1"
+			"used_by_classes"
+			{
+				"scout" 	"secondary"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"	"7 0 -10"
+			}
+			"attributes"
+			{
+				"drop team health pack on kill"
+				{
+					"attribute_class"	"drop_team_health_pack_on_kill"
+					"value" 			"1"
+				}
+				"extinguish reduces cooldown"
+				{
+					"attribute_class" 	"extinguish_reduces_cooldown"
+					"value" 			"0.25"
+				}
+				"healing received penalty"
+				{
+					"attribute_class"	"mult_healing_received"
+					"value" 			"0.25"
+				}
+				"effect bar recharge rate decreased"
+				{
+					"attribute_class"	"effectbar_recharge_rate"
+					"value" 			"1.5"
+				}
+				"hidden separator"		"1"
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"				"1"
+				}
+				"add condition on hit self"
+				{
+					"attribute_class"	"add_onhit_addcond_self_weapon"
+					"value"				"31 0.5"
+				}
+			}
+			"visuals"
+			{
+				"animation_replacement"
+				{
+					"ACT_SECONDARY_VM_INSPECT_START"	"ACT_ITEM1_VM_INSPECT_START"
+					"ACT_SECONDARY_VM_INSPECT_IDLE"		"ACT_ITEM1_VM_INSPECT_IDLE"
+					"ACT_SECONDARY_VM_INSPECT_END"		"ACT_ITEM1_VM_INSPECT_END"
+				}
+				"custom_particlesystem"
+				{
+					"system"	"energydrink_milk_splash"
+				}
+				"sound_deploy"	"Weapon_MadMilk.Draw"
+			}
+			"mouse_pressed_sound"		"ui/item_bottle_pickup.wav"
+			"drop_sound"				"ui/item_bottle_drop.wav"
+		}
 		/////////////
 		// SOLDIER //
 		/////////////
-		"1009" //DOME BREAKER
+		"1040" //DOME BREAKER
 		{
 			"name"						"DOME BREAKER"
 			"item_class"				"tf_weapon_rocketlauncher"
@@ -945,7 +1028,7 @@ Smaller clip size"
 			"mouse_pressed_sound"		"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"				"ui/item_heavy_gun_drop.wav"
 		}
-		"1010" //HORNET'S NEST
+		"1041" //HORNET'S NEST
 		{
 			"name"						"HORNET'S NEST"
 			"item_class"				"tf_weapon_rocketlauncher"
@@ -1056,7 +1139,7 @@ Reduced explosion radius"
 			"mouse_pressed_sound"		"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"				"ui/item_heavy_gun_drop.wav"
 		}
-		"1011" //GROUND W.A.S.P.
+		"1042" //GROUND W.A.S.P.
 		{
 			"name"						"GROUND W.A.S.P."
 			"item_class"				"tf_weapon_rocketlauncher"
@@ -1127,7 +1210,7 @@ Deals less damage, slower movement speed"
 			"mouse_pressed_sound"		"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"				"ui/item_heavy_gun_drop.wav"
 		}
-		"1012" //SPITFIRE
+		"1043" //SPITFIRE
 		{
 			"name"						"SPITFIRE"
 			"item_class"				"tf_weapon_rocketlauncher_airstrike"
@@ -1209,7 +1292,7 @@ Reduced explosion radius"
 			"mouse_pressed_sound"		"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"				"ui/item_heavy_gun_drop.wav"
 		}
-		"1013" //QUAD-LAUNCHER
+		"1044" //QUAD-LAUNCHER
 		{
 			"name"						"QUAD-LAUNCHER"
 			"item_class"				"tf_weapon_rocketlauncher"
@@ -1325,7 +1408,7 @@ Reduced explosion radius"
 		//////////
 		// PYRO //
 		//////////
-		"1014" //MOLOTOV LAUNCHER
+		"1045" //MOLOTOV LAUNCHER
 		{
 			"name"						"MOLOTOV LAUNCHER"
 			"item_class"				"tf_weapon_grenadelauncher"
@@ -1450,7 +1533,7 @@ No airblast"
 			"mouse_pressed_sound"		"ui/item_flamethrower_pickup.wav"
 			"drop_sound"				"ui/item_heavier_gun_drop.wav"
 		}
-		"1015" //MUTINY INCINERATOR
+		"1046" //MUTINY INCINERATOR
 		{
 			"name"						"MUTINY INCINERATOR"
 			"item_class"				"tf_weapon_flamethrower"
@@ -1543,7 +1626,7 @@ Increased airblast cost, airblast destroys projectiles"
 			"mouse_pressed_sound"		"ui/item_flamethrower_pickup.wav"
 			"drop_sound"				"ui/item_heavy_gun_drop.wav"
 		}
-		"1016" //MAKESHIFT MUTILATOR
+		"1047" //MAKESHIFT MUTILATOR
 		{
 			"name"						"MAKESHIFT MUTILATOR"
 			"item_class"				"tf_weapon_flamethrower"
@@ -1633,7 +1716,7 @@ Flames deal near no damage and zero afterburn damage"
 			"mouse_pressed_sound"		"ui/item_flamethrower_pickup.wav"
 			"drop_sound"				"ui/item_heavy_gun_drop.wav"
 		}
-		"1017" //SOLAR FLARE
+		"1048" //SOLAR FLARE
 		{
 			"name"						"SOLAR FLARE"
 			"item_class"				"tf_weapon_rocketlauncher_fireball"
@@ -1711,7 +1794,7 @@ Far shorter afterburn time and deals less damage"
 			"mouse_pressed_sound"		"ui/item_flamethrower_pickup.wav"
 			"drop_sound"				"ui/item_heavy_gun_drop.wav"
 		}
-		"1018" //CREMATOR'S CATCH
+		"1049" //CREMATOR'S CATCH
 		{
 			"name"						"CREMATOR'S CATCH"
 			"item_class"				"tf_weapon_flamethrower"
@@ -1806,7 +1889,7 @@ Deals less damage and move a bit slower"
 		///////////
 		// HEAVY //
 		///////////
-		"1022" //VELES
+		"1050" //VELES
 		{
 			"name"						"VELEZ"
 			"item_class"				"tf_weapon_minigun"
@@ -1880,7 +1963,7 @@ Bullets penetrate 2 enemies and destroy projectiles
 			"mouse_pressed_sound"		"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"				"ui/item_heavy_gun_drop.wav"
 		}
-		"1023" //BULLETPROOF BATTERY
+		"1051" //BULLETPROOF BATTERY
 		{
 			"name"						"BULLETPROOF BATTERY"
 			"item_class"				"tf_weapon_minigun"
@@ -1956,7 +2039,7 @@ Spread increases as health decreases"
 			"mouse_pressed_sound"		"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"				"ui/item_heavy_gun_drop.wav"
 		}
-		"1024" //PERFORATOR
+		"1052" //PERFORATOR
 		{
 			"name"						"PERFORATOR"
 			"item_class"				"tf_weapon_minigun"
@@ -2013,12 +2096,12 @@ Ammo drains much faster"
 				"damage penalty"
 				{
 					"attribute_class" 	"mult_dmg"
-					"value" 			"1.5"
+					"value" 			"0.5"
 				}
-				"fire rate penalty"
+				"mod projectiles per shot"	
 				{
-					"attribute_class" 	"mult_postfiredelay"
-					"value" 			"0.65"
+					"attribute_class"	"mod_projectiles_per_shot"
+					"value" 			"3"
 				}
 			}
 			"visuals"
@@ -2034,7 +2117,7 @@ Ammo drains much faster"
 			"mouse_pressed_sound"		"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"				"ui/item_heavy_gun_drop.wav"
 		}
-		"1025" //VLADISLAVA
+		"1053" //VLADISLAVA
 		{
 			"name"						"VLADISLAVA"
 			"item_class"				"tf_weapon_minigun"
@@ -2200,14 +2283,14 @@ Consumes 6 ammo per second revved"
 		"7007"
 		{
 			"name"	"Hooligan Harmer Combo Positive"
-			"description_string"	"Killing the same class repeatedly gives +20% fire rate bonus Up to a +60% fire rate bonus"
+			"description_string"	"Killing the same class repeatedly gives +15% fire rate bonus Up to a +45% fire rate bonus"
 			"description_format"	"value_is_additive"
 			"effect_type"	"positive"
 		}
 		"7008"
 		{
 			"name"	"Hooligan Harmer Combo Negative"
-			"description_string"	"Killing a different class resets your fire rate back to +20%"
+			"description_string"	"Killing a different class resets your fire rate back to +15%"
 			"description_format"	"value_is_additive"
 			"effect_type"	"negative"
 		}
@@ -2230,7 +2313,8 @@ Consumes 6 ammo per second revved"
 		"7011"
 		{
 			"name"					"weapon fires baseballs"
-			"description_string"	"Fires high-speed baseballs"
+			"description_string"	"Fires high-speed baseballs
+Baseballs minicrit after bouncing off enemies"
 			"description_format"	"value_is_additive"
 			"effect_type"			"positive"
 		}
@@ -2276,6 +2360,16 @@ Consumes 6 ammo per second revved"
 			"description_format"	"value_is_additive"
 			"hidden"				"0"
 			"effect_type"			"positive"
+			"stored_as_integer"		"0"
+		}
+		"7018"
+		{
+			"name"					"effect bar recharge rate decreased"
+			"attribute_class"		"effectbar_recharge_rate"
+			"description_string"	"%s1% decrease in recharge rate"
+			"description_format"	"value_is_percentage"
+			"hidden"				"0"
+			"effect_type"			"negative"
 			"stored_as_integer"		"0"
 		}
 	}
