@@ -195,6 +195,72 @@
 	"wave"			"weapons/quad_barrel/quad_barrel_shellinsert.wav"
 }
 //------------------------------------------------------------------------------------//
+// CONDIMENT CANNON
+//------------------------------------------------------------------------------------//
+
+"Weapon_Condiment.Single"
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"		"1.0"
+	"rndwave"
+	{
+		"wave"		"weapons/condiment_cannon/condiment_shoot.wav"
+	}
+}
+"Weapon_Condiment.SingleCrit"
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"		"1.0"
+	"rndwave"
+	{
+		"wave"		"weapons/condiment_cannon/condiment_shoot_crit.wav"
+	}
+}
+//------------------------------------------------------------------------------------//
+// GAMBIT
+//------------------------------------------------------------------------------------//
+
+"Weapon_Gambit.Single"
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"		"1.0"
+	"rndwave"
+	{
+		"wave"		"weapons/failed_pistol/failed_pistol_shoot.wav"
+	}
+}
+"Weapon_Gambit.SingleCrit"
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	"volume"		"1.0"
+	"rndwave"
+	{
+		"wave"		"weapons/failed_pistol/failed_pistol_shoot_crit.wav"
+	}
+}
+//------------------------------------------------------------------------------------//
+// GATOR'S GAT
+//------------------------------------------------------------------------------------//
+
+"Weapon_GatorsGat.Single"
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+	
+	"wave"			"weapons/gatorsgat_fire.wav"
+}
+"Weapon_GatorsGat.SingleCrit"
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_94dB"
+
+	"wave"			"weapons/gatorsgat_crit.wav"
+}
+//------------------------------------------------------------------------------------//
 // QUAD-LAUNCHER
 //------------------------------------------------------------------------------------//
 
